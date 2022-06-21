@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./src/public/css/main.style.css">
+    <link rel="stylesheet" href="./src/public/css/main.css">
 </head>
 <body>
     <?php
@@ -48,6 +48,8 @@
             echo "page not found";
             break;
         } 
+
+        include ("/MAMP/htdocs/BlueBooking.com/src/includes/Footer.inc.php");
     ?>
 </body>
 </html>
