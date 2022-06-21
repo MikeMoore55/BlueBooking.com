@@ -1,10 +1,57 @@
 .card{
-    border: solid 2px black;
+    border-radius: 10px;
     position: relative;
     width: 90%;
+    margin: 7% 5% 7% 5% ;
+    background-color: white;
+    padding: 2% 2% 2% 2%;
 }
 
 .hotel-img{
     position: relative;
     width: 100%;
+}
+
+.card h3{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.card .rating{
+    position: relative;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+
+.card .rating-img{
+    position: relative;
+    top: 0.1em;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.card .desc{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.2em;
+}
+
+.card .rate{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+@media (min-width: 500px){
+    .card{
+        margin: 4% 3% 4% 3%;
+    }
+}
+
+@media (min-width: 500px){
+    .card{
+        margin: 4% 3% 4% 3%;
+    }
 }

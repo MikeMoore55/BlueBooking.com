@@ -37,7 +37,7 @@
             require __DIR__ . './src/includes/Home.inc.php';
             break;
             case '/bookings':
-            require __DIR__ . './src/includes/Hooking.inc.php';
+            require __DIR__ . './src/includes/Booking.inc.php';
             break;
             case '/book':
             require __DIR__ . './src/includes/Booking.inc.php';
