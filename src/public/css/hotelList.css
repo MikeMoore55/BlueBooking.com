@@ -45,6 +45,8 @@
     font-weight: 700;
 }
 
+/* ----- MEDIA QUERIES ----- */
+
 @media (min-width: 500px){
     .card{
         margin: 4% 3% 4% 3%;

@@ -8,6 +8,8 @@
     right: 5%;
 }
 
+/* ----- MEDIA QUERIES ----- */
+
 @media (min-width: 500px){
     .hotel-cards{
         position: relative;

@@ -1,4 +1,5 @@
 <?php
+/* this creates the cards which info is displayed on */
 function createHotelList($Hotels)
 {
     foreach ($Hotels as $index => $HotelsArray) {

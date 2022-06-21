@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueBooking</title>
     <link rel="icon" href="/BlueBooking.com/src/public/images/blue-book.png">
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Fascinate&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
-
+    <!-- css stylesheet -->
     <link rel="stylesheet" href="./src/public/css/main.css">
 </head>
 <body>
@@ -20,6 +21,7 @@
         /* ----- Header ----- */
         include ("/MAMP/htdocs/BlueBooking.com/src/includes/Header.inc.php");
 
+        /* ----- Main ----- */
         $request = $_SERVER['REQUEST_URI'];
     
         $basepath = "BlueBooking.com/";
@@ -49,6 +51,7 @@
             break;
         } 
 
+        /* ----- Footer ----- */
         include ("/MAMP/htdocs/BlueBooking.com/src/includes/Footer.inc.php");
     ?>
 </body>
