@@ -13,41 +13,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./src/public/css/main.css">
+    <link rel="stylesheet" href="./src/public/css/main.style.css">
 </head>
 <body>
     <?php
         /* ----- Header ----- */
         include ("/MAMP/htdocs/BlueBooking.com/src/includes/Header.inc.php");
 
-      /*   $request = $_SERVER['REQUEST_URI'];
+        $request = $_SERVER['REQUEST_URI'];
     
-        $basepath = "php-oop-booking-app/";
+        $basepath = "BlueBooking.com/";
         $request = str_replace($basepath, "", $request);
         echo $request;
     
         switch ($request) { 
             case '/home':
-            require __DIR__ . '/src/include/Home.inc.php';
+            require __DIR__ . './src/includes/Home.inc.php';
             break;
             case '/':
-            require __DIR__ . '/src/include/Home.inc.php';
+            require __DIR__ . './src/includes/Home.inc.php';
             break;
             case '':
-            require __DIR__ . '/src/include/Home.inc.php';
+            require __DIR__ . './src/includes/Home.inc.php';
             break;
             case '/bookings':
-            require __DIR__ . '/src/include/Hooking.inc.php';
+            require __DIR__ . './src/includes/Hooking.inc.php';
             break;
             case '/book':
-            require __DIR__ . '/src/include/Booking.inc.php';
+            require __DIR__ . './src/includes/Booking.inc.php';
             break;
         
         default:
             http_response_code(404);
             echo "page not found";
             break;
-        } */
+        } 
     ?>
 </body>
 </html>
