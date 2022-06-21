@@ -1,0 +1,67 @@
+header{
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    top: 0%;
+    left: 0%;
+    background-color: transparent;
+    display: flex;
+    z-index: 5;
+}
+
+header .header-img{
+    position: relative;
+    width: 14%;
+    height: 100%;
+    margin-left: 3%;
+    margin-top: 1%;
+    transform: rotateZ(345deg);
+}
+
+header h1{
+    margin-left: 1%;
+    font-family: 'Fascinate', cursive;
+    font-size: 1.7em;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@media (min-width: 500px){
+    header{
+        height: 10%;
+    }
+    
+    header .header-img{
+        width: 10%;
+        margin-left: 2%;
+        margin-top: 1%;
+    }
+    
+    header h1{
+        margin-left: 1%;
+        font-size: 2.5em;
+    }
+}
+
+@media (min-width: 1000px){
+    header{
+        height: 10%;
+    }
+    
+    header .header-img{
+        width: 8%;
+        margin-left: 2%;
+        margin-top: 1%;
+    }
+    
+    header h1{
+        margin-left: 1%;
+        font-size: 2.5em;
+    }
+}
+
+/* fonts
+font-family: 'Kdam Thmor Pro', sans-serif;
+font-family: 'Chakra Petch', sans-serif;
+font-family: 'Fascinate', cursive;
+*/
