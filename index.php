@@ -16,8 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
     <!-- css stylesheet -->
-    <link rel="stylesheet" href="./src/public/css/main.style.css">
-
+    <link rel="stylesheet" href="./src/public/css/main.css">
 </head>
 <body>
     <?php
@@ -33,19 +32,19 @@
     
         switch ($request) { 
             case '/home':
-            require __DIR__ . './src/includes/Home.inc.php';
+            require __DIR__ . '/src/includes/Home.inc.php';
             break;
             case '/':
-            require __DIR__ . './src/includes/Home.inc.php';
+            require __DIR__ . '/src/includes/Home.inc.php';
             break;
             case '':
-            require __DIR__ . './src/includes/Home.inc.php';
+            require __DIR__ . '/src/includes/Home.inc.php';
             break;
-            case '/bookings':
-            require __DIR__ . './src/includes/Booking.inc.php';
+            case '/booking':
+            require __DIR__ . '/src/includes/BookingDisplay.inc.php';
             break;
             case '/book':
-            require __DIR__ . './src/includes/Booking.inc.php';
+            require __DIR__ . '/src/includes/BookingDisplay.inc.php';
             break;
         
         default:
