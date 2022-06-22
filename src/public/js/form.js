@@ -1,8 +1,8 @@
 const form = document.querySelector("#form-div");
 const bookingBtn = document.querySelector("#booking-btn");
 
-form.style.display="none";
 
+form.style.display="none";
 bookingBtn.addEventListener("click", appear)
 
 function appear(){
