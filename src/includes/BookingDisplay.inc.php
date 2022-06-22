@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
     include ("/MAMP/htdocs/BlueBooking.com/src/includes/HotelInitialization.inc.php");
     include ("/MAMP/htdocs/BlueBooking.com/src/classes/HotelBookingInfoClass.class.php");
@@ -14,6 +15,7 @@
         $checkIn = $_POST["checkIn"];
         $checkOut = $_POST["checkOut"];
         
+        $_SESSION["selectedHotel"] = $selection;
         /* empty array */
         $hotelArray = array();
 
@@ -22,12 +24,17 @@
             $hotelArray[$value['name']] = array("rate" => $value["rate"],"image" => $value["image"], "desc" => $value["description"], "rating" => $value["rating"], "pool" => $value["pool"], "spa" => $value["spa"], "wifi" => $value["wifi"], "restaurant" => $value["restaurant"], "childFriendly" => $value["childFriendly"] );
         };
 
+        $_SESSION["simpleHotelArray"] = $hotelArray;
+
         $selectedHotel = $hotelArray["$selection"];
 
         $newBooking = BookingInformation::createBooking($userName, $userSurname, $userEmail, $selection, $selectedHotel["image"], $selectedHotel["rating"], $selectedHotel["desc"], $selectedHotel["pool"], $selectedHotel["wifi"], $selectedHotel["spa"], $selectedHotel["restaurant"], $selectedHotel["childFriendly"] ,$checkIn, $checkOut, $selectedHotel["rate"]);
         
         $selectedHotelObject = [];
         array_push($selectedHotelObject, $newBooking);
+
+        $selectedHotelJson = json_encode($selectedHotelObject);
+        file_put_contents("bookingInfo.json", $selectedHotelJson);
     }
 
 ?>
@@ -87,10 +94,10 @@
                                 </div>
                                 <h3 class="total">Total: </h3><p>R'.$booking->calcCosts().'-00</p>  
                                 <div class="btns">
-                                    <form action="compare.page.php" method="GET" class="compare">
+                                    <form action="compare" method="POST" class="compare">
                                         <input type="submit" name="compare" value="Compare Booking" class="compare-btn">
                                     </form>
-                                    <form action="confirmation.page.php" method="GET" class="confirm">
+                                    <form action="confirm" method="POST" class="confirm">
                                         <input type="submit" name="confirm" value="Confirm Booking" class="confirm-btn">
                                     </form>
                                 </div>
