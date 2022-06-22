@@ -31,20 +31,26 @@
     
         switch ($request) { 
             case '/home':
-            require __DIR__ . '/src/includes/Home.inc.php';
-            break;
+                require __DIR__ . '/src/includes/Home.inc.php';
+                break;
             case '/':
-            require __DIR__ . '/src/includes/Home.inc.php';
-            break;
+                require __DIR__ . '/src/includes/Home.inc.php';
+                break;
             case '':
-            require __DIR__ . '/src/includes/Home.inc.php';
-            break;
+                require __DIR__ . '/src/includes/Home.inc.php';
+                break;
             case '/booking':
-            require __DIR__ . '/src/includes/BookingDisplay.inc.php';
-            break;
+                require __DIR__ . '/src/includes/BookingDisplay.inc.php';
+                break;
             case '/book':
-            require __DIR__ . '/src/includes/BookingDisplay.inc.php';
-            break;
+                require __DIR__ . '/src/includes/BookingDisplay.inc.php';
+                break;
+            case '/compare':
+                require __DIR__ . '/src/includes/CompareBooking.inc.php';
+                break;
+            case '/confirm':
+                require __DIR__ . '/src/includes/ConfirmBooking.inc.php';
+                break;
         
         default:
             http_response_code(404);
