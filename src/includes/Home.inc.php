@@ -17,7 +17,7 @@ $Hotels = hotelOptionsArray();
         ?>
     </div>
     <div id="form-div" class="form-div">
-        <form id="form" class="booking-form" method="POST" action="BlueBooking.com/booking">
+        <form id="form" class="booking-form" method="POST" action="booking">
             <span onclick="disappear()">X</span>
             <h2>Make Your Booking</h2>
             <div class="user">
