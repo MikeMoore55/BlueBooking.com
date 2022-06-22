@@ -17,7 +17,7 @@ $Hotels = hotelOptionsArray();
         ?>
     </div>
     <div id="form-div" class="form-div">
-        <form id="form" method="GET" action="">
+        <form id="form" class="booking-form" method="GET" action="">
             <h2>Make Your Booking</h2>
             <div class="user">
                 <div class="name">

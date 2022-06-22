@@ -7,13 +7,15 @@ function createHotelList($Hotels)
         echo ' 
             <div class="card">
                 <img src="'.$HotelsArray["image"].'" class="hotel-img">
-                <h3>'.$HotelsArray["name"].'</h3>
-                <p class="rating">'.$HotelsArray["rating"].' <img class="rating-img" src="./src/public/images/star.png"</p>
-                <p class="desc">'.$HotelsArray["description"].'</p>
-                <p class="rate">'.$HotelsArray["rate"].'-00 ZAR / night</p>
-                <button id="booking-btn" class="booking-btn" onclick="appear()">
-                    Book
-                </button>
+                <div class="info">
+                    <h3>'.$HotelsArray["name"].'</h3>
+                    <p class="rating">'.$HotelsArray["rating"].' <img class="rating-img" src="./src/public/images/star.png"</p>
+                    <p class="desc">'.$HotelsArray["description"].'</p>
+                    <p class="rate">'.$HotelsArray["rate"].'-00 ZAR / night</p>
+                    <button id="booking-btn" class="booking-btn" onclick="appear()">
+                        Book
+                    </button>
+                </div>
             </div> 
             ';
     }

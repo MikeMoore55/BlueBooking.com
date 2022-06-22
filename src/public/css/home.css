@@ -1,4 +1,3 @@
-@import url("hotelList.css");
 
 .hotel-cards{
     position: relative;
@@ -10,6 +9,14 @@
 
 .form-div{
     display: none;
+}
+
+.booking-form{
+    position: fixed;
+    z-index: 10%;
+    background-color: white;
+    border: solid 4px #0077b6;
+    border-radius: 10px;
 }
 
 /* ----- MEDIA QUERIES ----- */
@@ -26,7 +33,7 @@
 @media (min-width: 1000px){
     .hotel-cards{
         position: relative;
-        margin-top: 7%;
+        margin-top: 6%;
         display: grid;
         grid-template-columns: 33.333% 33.333% 33.333%;
     }
