@@ -8,6 +8,10 @@
     right: 5%;
 }
 
+.form-div{
+    display: none;
+}
+
 /* ----- MEDIA QUERIES ----- */
 
 @media (min-width: 500px){

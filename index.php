@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueBooking</title>
     <link rel="icon" href="/BlueBooking.com/src/public/images/blue-book.png">
+    <!-- js -->
+    <script src="./src/public/js/form.js" defer></script>
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
     <!-- css stylesheet -->
     <link rel="stylesheet" href="./src/public/css/main.css">
+
 </head>
 <body>
     <?php

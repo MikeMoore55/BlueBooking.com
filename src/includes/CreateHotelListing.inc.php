@@ -11,6 +11,9 @@ function createHotelList($Hotels)
                 <p class="rating">'.$HotelsArray["rating"].' <img class="rating-img" src="./src/public/images/star.png"</p>
                 <p class="desc">'.$HotelsArray["description"].'</p>
                 <p class="rate">'.$HotelsArray["rate"].'-00 ZAR / night</p>
+                <button id="booking-btn" class="booking-btn" onclick="appear()">
+                    Book
+                </button>
             </div> 
             ';
     }

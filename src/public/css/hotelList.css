@@ -45,6 +45,10 @@
     font-weight: 700;
 }
 
+.card button{
+    background-color: #0077b6;
+}
+
 /* ----- MEDIA QUERIES ----- */
 
 @media (min-width: 500px){
