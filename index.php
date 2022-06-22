@@ -28,7 +28,6 @@
     
         $basepath = "BlueBooking.com/";
         $request = str_replace($basepath, "", $request);
-        echo $request;
     
         switch ($request) { 
             case '/home':

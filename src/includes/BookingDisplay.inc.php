@@ -7,7 +7,7 @@
     $Hotels = hotelOptionsArray();
 
     if (isset($_POST["Book"])) {
-        $username = $_POST["firstName"];
+        $userName = $_POST["firstName"];
         $userSurname = $_POST["lastName"];
         $userEmail = $_POST["email"];
         $selection = $_POST["hotelSelection"];
@@ -44,7 +44,44 @@
     <main>
     <div class="display-info">
         <?php
-         print_r($selectedHotelObject)
+                 foreach ($selectedHotelObject as $index => $booking) {
+                    echo'
+                            <div>
+                                <h2>Your Booking</h2>
+                                <div class="user">
+                                    <div class="name">
+                                        <h3>User: </h3><p>'.$booking ->fullName().'</p>
+                                    </div>
+                                    <div class="email">
+                                        <h3>Email: </h3><p>'.$booking-> email.'</p>
+                                    </div>
+                                </div>
+                                <div class="hotel-info">
+                                    <div class="hotel">
+                                        <div class="hotel-name">
+                                            <h3>Hotel: </h3><p>'.$booking->hotel.'</p>
+                                        </div> 
+                                        <div class="hotel-rate">            
+                                            <h3>Hotel Rate: </h3><p>R'.$booking->rate.'-00/day</p>
+                                        </div> 
+                                    </div>    
+                                    <img class="hotel-img" src="'.$booking->image.'">
+                                </div>   
+                                <div class="time">
+                                    <div class="in">
+                                        <h3>Check-In: </h3><p>'.$booking->checkIn.'</p>
+                                    </div>
+                                    <div class="out">
+                                        <h3>Check-Out: </h3><p>'.$booking->checkOut.'</p>
+                                    </div>
+                                    <div class="total-days">
+                                        <h3>Days: </h3><p>'.$booking->calcDays().'</p>
+                                    </div>        
+                                </div>
+                                <h3 class="total">Total: </h3><p>R'.$booking->calcCosts().'-00</p>  
+                            </div>
+                            ';
+                }; 
         ?>
     </div>
 </main>
