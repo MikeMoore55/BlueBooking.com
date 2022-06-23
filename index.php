@@ -8,6 +8,8 @@
     <link rel="icon" href="/BlueBooking.com/src/public/images/blue-book.png">
     <!-- js -->
     <script src="./src/public/js/form.js" defer></script>
+    <script src="./src/public/js/newBook.js" defer></script>
+    
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

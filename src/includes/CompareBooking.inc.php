@@ -29,6 +29,9 @@
     $alternativeOptions = array_slice($options, 0, 2);
 ?>
 
+<script src="./src/public/js/form.js" defer></script>
+
+
 <main>
     <div class="compare-info">
 
@@ -59,8 +62,10 @@
                 }
             ?>
         </fieldset>
+
         <?php
             foreach ($alternativeOptions as $option => $value) {
+                $selectOption .= '<option>'.$option.'</option>';
                 echo '
                     <fieldset class="alternative-booking">
                     <legend>Alternative Option</legend>
@@ -76,6 +81,9 @@
                         </ol>
                         <p>ChildFriendly: '.$value["childFriendly"].'</p>
                         <p class="total">Total: '.$total = calcCosts($days, $value["rate"]).'-00 ZAR</p>
+                        <button onclick="newBook()">
+                            Book Alternative Hotel
+                        </button> 
                     </fieldset>
                     ';
             }
@@ -83,17 +91,20 @@
 
     </div>
 
-    <div id="new-book-form" class="new-book-form">
-        <form id="form" class="booking-form" method="POST" action="booking">
-            <span onclick="disappear()">X</span>
-            <h2>Make Your Booking</h2>
-            <label for="hotelSelection">Where would you like to stay:</label>
+
+
+    <div id="new-book-div" class="new-book-div">
+        <form id="new-booking-form" class="new-booking-form" method="POST" action="confirm">
+            <span onclick="hideNewBook()">X</span>
+            <h4>Book an Alternative Hotel</h4>
+            <label for="hotelSelection">Choose the Alternative Hotel:</label>
                 <br>
-                                <select name="hotelSelection">
+            <select name="hotelSelection">
                 <?php
-                    createBookingFormOption($Hotels)
+                    echo $selectOption;
                 ?>
             </select>
+            <input id="book-btn" type="submit" class="book-btn" name="newConfirm" value="confirm">
 
         </div>
     </div>
