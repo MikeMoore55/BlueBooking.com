@@ -906,7 +906,7 @@ header h1{
 @media (min-width: 1000px){
     .compare-info{
         margin: 5% 0% 0% 0%;
-        width: 90%;
+        width: 100%;
         padding: 0% 5% 0% 5%;
         display: grid;
         grid-template-columns: 33.33% 33.33% 33.33%;
@@ -914,7 +914,7 @@ header h1{
     
     .compare-info .original-booking{
         width: 90%;
-        margin: 5% 5% 1% 0%;
+        margin: 5% 5% 1% 5%;
         border: solid #185E95 5px;
     }
     
