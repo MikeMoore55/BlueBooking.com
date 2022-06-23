@@ -3,6 +3,8 @@
 
     include ("/MAMP/htdocs/BlueBooking.com/src/classes/HotelBookingInfoClass.class.php");
     include ("/MAMP/htdocs/BlueBooking.com/src/classes/NewComparedHotelBookingInfoClass.class.php");
+    include ("/MAMP/htdocs/BlueBooking.com/src/functions/calcCost.func.php");
+    include ("/MAMP/htdocs/BlueBooking.com/src/functions/calcDays.func.php");
 
     $hotelOptionArray = $_SESSION["simpleHotelArray"];
     $BookedHotelArray = $_SESSION["BookedHotel"];
@@ -44,6 +46,19 @@
         $SelectedHotel = $original;
     };
 
+
+    foreach ($SelectedHotel as $Hotel => $Booking) {
+        $email = $Booking["email"];
+        $name = $Booking["name"];
+        $surname = $Booking["surname"];
+        $hotelName = $Booking["hotel"];
+        $hotelCheckIn = $Booking["checkIn"];
+        $hotelCheckOut = $Booking["checkOut"];
+        $hotelRate = $Booking["rate"];
+
+        $totalDays = calcDays($hotelCheckIn, $hotelCheckOut);
+        $totalCosts = calcCosts($totalDays, $hotelRate);
+    };
 /* //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -95,5 +110,6 @@ try {
 <main>
     <?php
         print_r($SelectedHotel);
+        echo $email;
     ?>
 </main>
