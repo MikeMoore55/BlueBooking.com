@@ -68,7 +68,7 @@ header h1{
     
     header h1{
         margin-left: 1%;
-        font-size: 1.9em;
+        font-size: 2em;
     }
 }
 
@@ -776,19 +776,6 @@ header h1{
     font-weight: 700;
 }
 
-.compare-info .original-booking .confirm-original{
-    position: relative;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    width: 80%;
-    margin: 1% 8% 2% 8% ;
-    background-color: #0077b6;
-    border-radius: 10px;
-    border: none;
-    font-size: 1em;
-    padding: 2% 2% 2% 2%;
-    box-shadow: rgb(72, 72, 72) 5px 5px 7px 0px;
-}
-
 
 .compare-info .alternative-booking{
     position: relative;
@@ -847,19 +834,6 @@ header h1{
     text-decoration: underline;
     font-size: 1.2em;
     font-weight: 700;
-}
-
-.compare-info .alternative-booking .confirm-alternative{
-    position: relative;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    width: 80%;
-    margin: 1% 8% 2% 8% ;
-    background-color: #0077b6;
-    border-radius: 10px;
-    border: none;
-    font-size: 1em;
-    padding: 2% 2% 2% 2%;
-    box-shadow: rgb(72, 72, 72) 5px 5px 7px 0px;
 }
 
 .new-book-div{
@@ -969,11 +943,6 @@ header h1{
         font-size: 1.4em;
         font-weight: 700;
     }
-
-    .compare-info .original-booking .confirm-original{
-        position: relative;
-        font-size: 1.3em;
-    }
     
     .compare-info .alternative-booking{
         margin-top: 10%;
@@ -1010,13 +979,6 @@ header h1{
         font-weight: 700;
     }
 
-    .compare-info .alternative-booking .confirm-alternative{
-        position: relative;
-        width: 90%;
-        margin: 1% 3% 2% 3% ;
-        font-size: 1.3em;
-    }
-
     .new-book-div{
         top: 12%;
         width: 86%;
@@ -1050,7 +1012,7 @@ header h1{
 
 @media (min-width: 1000px){
     .compare-info{
-        margin: 3% 0% 0% 0%;
+        margin: 5% 0% 0% 0%;
         width: 90%;
         padding: 0% 5% 0% 5%;
         display: grid;
@@ -1060,51 +1022,38 @@ header h1{
     .compare-info .original-booking{
         width: 90%;
         margin: 5% 5% 1% 0%;
-        border: solid #185E95 4px;
+        border: solid #185E95 5px;
     }
     
     .compare-info .original-booking .hotel-img{
-        width: 66%;
-        margin: 0% 18% 0% 18%;
+        width: 70%;
+        margin: 0% 15% 0% 15%;
     }
     
     .compare-info .original-booking legend{
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
     
     .compare-info .original-booking h2{
-        font-size: 1em;
+        font-size: 1.2em;
     }
     
     .compare-info .original-booking h3{
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
     
     .compare-info .original-booking p{
-        font-size: 0.8em;
+        font-size: 1em;
     }
     
     .compare-info .original-booking ol{
-        font-size: 0.8em;
+        font-size: 1em;
     }
     
     
     .compare-info .original-booking .total{
-        font-size: 0.8em;
+        font-size: 1.1em;
         font-weight: 700;
-    }
-
-    .compare-info .original-booking .confirm-original{
-        position: relative;
-        font-family: 'Kdam Thmor Pro', sans-serif;
-        width: 50%;
-        margin: 0.5% 23% 0.5% 23% ;
-        background-color: #0077b6;
-        border-radius: 10px;
-        border: none;
-        font-size: 0.9em;
-        padding: 1% 2% 1% 2%;
-        box-shadow: rgb(72, 72, 72) 5px 5px 7px 0px;
     }
     
     .compare-info .alternative-booking{
@@ -1113,46 +1062,33 @@ header h1{
     }
     
     .compare-info .alternative-booking .hotel-img{
-        width: 64%;
-        margin: 0% 18% 0% 18%;
+        width: 98%;
+        margin: 0% 1% 0% 1%;
     }
     
     .compare-info .alternative-booking legend{
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
     
     .compare-info .alternative-booking h2{
-        font-size: 1em;
+        font-size: 1.2em;
     }
     
     .compare-info .alternative-booking h3{
-        font-size: 1em;
+        font-size: 1.1em;
     }
     
     .compare-info .alternative-booking p{
-        font-size: 0.9em;
+        font-size: 1em;
     }
     
     .compare-info .alternative-booking ol{
-        font-size: 0.8em;
+        font-size: 1em;
     }
     
     .compare-info .alternative-booking .total{
-        font-size: 0.8em;
+        font-size: 1.1em;
         font-weight: 700;
-    }
-
-    .compare-info .alternative-booking .confirm-alternative{
-        position: relative;
-        font-family: 'Kdam Thmor Pro', sans-serif;
-        width: 50%;
-        margin: 0.5% 23% 0.5% 23% ;
-        background-color: #0077b6;
-        border-radius: 10px;
-        border: none;
-        font-size: 0.9em;
-        padding: 1% 2% 1% 2%;
-        box-shadow: rgb(72, 72, 72) 5px 5px 7px 0px;
     }
     
     .new-book-div{
@@ -1178,12 +1114,12 @@ header h1{
     }
     
     .new-book-div select{
-        font-size: 1.1em;
+        font-size: 1.3em;
         border: #0077b6 solid 4px;
     }
     
     .new-book-div .book-btn{
-        font-size: 1.1em;
+        font-size: 1.4em;
     }
 }
 
@@ -1216,9 +1152,3 @@ footer p{
     }
 }
 
-
-@media (min-width: 1000px){
-    footer p{
-        font-size: 1em;
-    }
-}

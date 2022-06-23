@@ -81,7 +81,7 @@
                             <li>Spa: '.$value["spa"].'</li>
                             <li>Restaurant: '.$value["restaurant"].'</li>
                         </ol>
-                        <p>Child-Friendly: '.$value["childFriendly"].'</p>
+                        <p>ChildFriendly: '.$value["childFriendly"].'</p>
                         <p class="total">Total: '.$total = calcCosts($days, $value["rate"]).'-00 ZAR</p>
                         <button class="confirm-alternative" onclick="newBook()">
                             Book Alternative Hotel

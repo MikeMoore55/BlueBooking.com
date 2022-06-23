@@ -90,9 +90,8 @@
                                     </div>        
                                 </div>
                                 <div class="costs">
-                                    <div class=amount>
-                                        <h3 class="total">Total: </h3>
-                                        <p>'.$booking->calcCosts().'-00 ZAR</p>
+                                    <div class=total>
+                                        <h3 class="total">Total: </h3><p>'.$booking->calcCosts().'-00 ZAR</p>
                                     </div>
                                     <div class="hotel-rate">            
                                         <h3>Hotel Rate: </h3>

@@ -57,8 +57,8 @@
                                 <li>Restaurant: '.$Booking["restaurant"].'</li>                            </ol>
                             <p>Child-Friendly: '.$Booking["childFriendly"].'</p>
                             <p class="total">Total: '.$total.'-00 ZAR</p>
-                            <form action="confirm" method="POST" >
-                                <input class="confirm-original" type="submit" name="confirm" value="Confirm Booking" class="confirm-btn">
+                            <form action="confirm" method="POST" class="confirm-original">
+                                <input type="submit" name="confirm" value="Confirm Booking" class="confirm-btn">
                             </form>
                         ';
                 }
@@ -81,7 +81,7 @@
                             <li>Spa: '.$value["spa"].'</li>
                             <li>Restaurant: '.$value["restaurant"].'</li>
                         </ol>
-                        <p>Child-Friendly: '.$value["childFriendly"].'</p>
+                        <p>ChildFriendly: '.$value["childFriendly"].'</p>
                         <p class="total">Total: '.$total = calcCosts($days, $value["rate"]).'-00 ZAR</p>
                         <button class="confirm-alternative" onclick="newBook()">
                             Book Alternative Hotel

@@ -1069,7 +1069,7 @@ header h1{
     }
     
     .compare-info .original-booking legend{
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
     
     .compare-info .original-booking h2{
@@ -1090,7 +1090,7 @@ header h1{
     
     
     .compare-info .original-booking .total{
-        font-size: 0.8em;
+        font-size: 1em;
         font-weight: 700;
     }
 
@@ -1122,7 +1122,7 @@ header h1{
     }
     
     .compare-info .alternative-booking h2{
-        font-size: 1em;
+        font-size: 1.1em;
     }
     
     .compare-info .alternative-booking h3{
@@ -1138,7 +1138,7 @@ header h1{
     }
     
     .compare-info .alternative-booking .total{
-        font-size: 0.8em;
+        font-size: 1em;
         font-weight: 700;
     }
 
@@ -1178,12 +1178,12 @@ header h1{
     }
     
     .new-book-div select{
-        font-size: 1.1em;
+        font-size: 1.3em;
         border: #0077b6 solid 4px;
     }
     
     .new-book-div .book-btn{
-        font-size: 1.1em;
+        font-size: 1.4em;
     }
 }
 
@@ -1216,9 +1216,3 @@ footer p{
     }
 }
 
-
-@media (min-width: 1000px){
-    footer p{
-        font-size: 1em;
-    }
-}

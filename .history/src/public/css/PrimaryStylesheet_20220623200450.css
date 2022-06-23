@@ -1178,7 +1178,7 @@ header h1{
     }
     
     .new-book-div select{
-        font-size: 1.1em;
+        font-size: 1.3em;
         border: #0077b6 solid 4px;
     }
     
@@ -1216,9 +1216,3 @@ footer p{
     }
 }
 
-
-@media (min-width: 1000px){
-    footer p{
-        font-size: 1em;
-    }
-}

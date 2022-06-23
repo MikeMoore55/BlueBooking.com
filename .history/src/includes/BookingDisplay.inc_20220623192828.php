@@ -89,16 +89,13 @@
                                         <h3>Days: </h3><p>'.$booking->calcDays().'</p>
                                     </div>        
                                 </div>
-                                <div class="costs">
-                                    <div class=amount>
-                                        <h3 class="total">Total: </h3>
-                                        <p>'.$booking->calcCosts().'-00 ZAR</p>
-                                    </div>
-                                    <div class="hotel-rate">            
-                                        <h3>Hotel Rate: </h3>
-                                        <p>'.$booking->rate.'-00 ZAR/day</p>
-                                    </div>
-                                </div>   
+                                <div class=total></div>
+                                    h3 class="total">Total: </h3><p>'.$booking->calcCosts().'-00 ZAR</p>
+                                </div>
+                                <div class="hotel-rate">            
+                                            <h3>Hotel Rate: </h3>
+                                            <p>'.$booking->rate.'-00 ZAR/day</p>
+                                        </div>   
                                 <div class="btns">
                                     <form action="compare" method="POST" class="compare">
                                         <input type="submit" name="compare" value="Compare Booking" class="compare-btn">

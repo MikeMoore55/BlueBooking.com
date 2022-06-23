@@ -1220,5 +1220,6 @@ footer p{
 @media (min-width: 1000px){
     footer p{
         font-size: 1em;
+        height: 2%;
     }
 }
