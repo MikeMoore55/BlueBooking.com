@@ -52,15 +52,11 @@
         $totalCosts = calcCosts($totalDays, $$Booking["rate"]);
         
         $body .= '  <p>Greetings '.$Booking["name"] .' '.$Booking["surname"].'</p>
-                    <br>
-                    <br>
                     <p>Your Booking at <b>'.$Booking["hotel"].'</b> has been Booked.</p>
-                    <br>
-                    <p><b>Nightly Rate: </b>'.$Booking["rate"].' ZAR / day</p>
-                    <p><b>Check In: </b>'.$Booking["checkIn"].'</p>
-                    <p><b>Check Out: </b>'.$Booking["checkOut"].'</p>
-                    <p><b>Total Stay: </b>'.$days = calcDays($$Booking["checkIn"], $Booking["checkOut"]).' day/s</p>
-                    <p><b>Total Amount: </b>'.calcCosts(calcDays($$Booking["checkIn"], $Booking["checkOut"]), $Booking["rate"]).' ZAR</p>
+                    <p>Nightly Rate: '.$Booking["rate"].'</p>
+                    <p>Check In: '.$Booking["checkIn"].'</p>
+                    <p>Check Out: '.$Booking["checkOut"].'</p>
+                    <p>Your Total: '.$totalCosts.' ZAR</p>
                     <br>
                     <br>
                     <p>Thank you for using BlueBooking.com</p>

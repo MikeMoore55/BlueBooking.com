@@ -74,7 +74,7 @@
                                         <img class="hotel-img" src="'.$booking->image.'">
                                         <div class="hotel-rate">            
                                             <h3>Hotel Rate: </h3>
-                                            <p>'.$booking->rate.'-00 ZAR/day</p>
+                                            <p>R'.$booking->rate.'-00/day</p>
                                         </div> 
                                     </div>    
                                     
@@ -92,7 +92,7 @@
                                         <h3>Days: </h3><p>'.$booking->calcDays().'</p>
                                     </div>        
                                 </div>
-                                <h3 class="total">Total: </h3><p>'.$booking->calcCosts().'-00 ZAR</p>  
+                                <h3 class="total">Total: </h3><p>R'.$booking->calcCosts().'-00</p>  
                                 <div class="btns">
                                     <form action="compare" method="POST" class="compare">
                                         <input type="submit" name="compare" value="Compare Booking" class="compare-btn">

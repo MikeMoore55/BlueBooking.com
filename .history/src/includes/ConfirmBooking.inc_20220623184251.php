@@ -60,7 +60,7 @@
                     <p><b>Check In: </b>'.$Booking["checkIn"].'</p>
                     <p><b>Check Out: </b>'.$Booking["checkOut"].'</p>
                     <p><b>Total Stay: </b>'.$days = calcDays($$Booking["checkIn"], $Booking["checkOut"]).' day/s</p>
-                    <p><b>Total Amount: </b>'.calcCosts(calcDays($$Booking["checkIn"], $Booking["checkOut"]), $Booking["rate"]).' ZAR</p>
+                    <p><b>Total Ammout: </b>'.calcCosts(calcDays($$Booking["checkIn"], $Booking["checkOut"]), $Booking["rate"]).' ZAR</p>
                     <br>
                     <br>
                     <p>Thank you for using BlueBooking.com</p>
