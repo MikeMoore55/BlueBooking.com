@@ -66,7 +66,8 @@
                 <script>
                     alert('Error, your stay at $hotelName must be longer than 1 night');
                 </script>";
-                header("Location: home"); 
+                header("Location: /home"); 
+                
     
             } else {
     

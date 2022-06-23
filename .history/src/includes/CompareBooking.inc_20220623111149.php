@@ -5,8 +5,6 @@
     include ("/MAMP/htdocs/BlueBooking.com/src/classes/HotelBookingInfoClass.class.php");
     include ("/MAMP/htdocs/BlueBooking.com/src/functions/calcCost.func.php");
     include ("/MAMP/htdocs/BlueBooking.com/src/functions/calcDays.func.php");
-    include ("/MAMP/htdocs/BlueBooking.com/src/includes/BookingForm.inc.php");
-
     
     /* take json, convert to array */
     $Hotels = hotelOptionsArray();
@@ -81,21 +79,6 @@
             }
         ?>
 
-    </div>
-
-    <div id="new-book-form" class="new-book-form">
-        <form id="form" class="booking-form" method="POST" action="booking">
-            <span onclick="disappear()">X</span>
-            <h2>Make Your Booking</h2>
-            <label for="hotelSelection">Where would you like to stay:</label>
-                <br>
-                                <select name="hotelSelection">
-                <?php
-                    createBookingFormOption($Hotels)
-                ?>
-            </select>
-
-        </div>
     </div>
    
 </main>

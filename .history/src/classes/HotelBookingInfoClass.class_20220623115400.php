@@ -65,8 +65,9 @@
                 echo "
                 <script>
                     alert('Error, your stay at $hotelName must be longer than 1 night');
-                </script>";
-                header("Location: home"); 
+                </script>"
+                header("location: /home"); 
+                ;
     
             } else {
     

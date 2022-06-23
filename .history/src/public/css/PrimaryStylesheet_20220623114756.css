@@ -1,0 +1,1016 @@
+body{
+    background-color: rgb(236, 234, 234);
+}
+
+/* header */
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    top: 0%;
+    left: 0%;
+    background-color: transparent;
+    display: flex;
+    z-index: 5;
+    padding-bottom: 2%;
+    border-radius: 10px;
+}
+
+header .header-img{
+    position: relative;
+    width: 14%;
+    height: 100%;
+    margin-left: 3%;
+    margin-top: 1%;
+    transform: rotateZ(345deg);
+}
+
+header h1{
+    margin-left: 1%;
+    font-family: 'Fascinate', cursive;
+    font-size: 1.7em;
+}
+
+
+/* ----- MEDIA QUERIES ----- */
+
+@media (min-width: 500px){
+    header{
+        height: 10%;
+    }
+    
+    header .header-img{
+        width: 14%;
+        margin-left: 2%;
+        margin-top: 1%;
+        padding-bottom: 1%;
+    }
+    
+    header h1{
+        margin-left: 1%;
+        font-size: 2.8em;
+    }
+}
+
+@media (min-width: 1000px){
+    header{
+        height: 10%;
+        padding-bottom: 2%;
+    }
+    
+    header .header-img{
+        width: 6%;
+        height: 90%;
+        margin-left: 1%;
+        margin-top: 1%;
+    }
+    
+    header h1{
+        margin-left: 1%;
+        font-size: 2.2em;
+    }
+}
+
+
+.hotel-cards{
+    position: relative;
+    margin-top: 11%;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+}
+
+.form-div{
+   display: none;
+}
+
+.booking-form{
+    position: fixed;
+    z-index: 10;
+    top: 20%;
+    left: 2%;
+    right: 2%;
+    background-color: white;
+    border: solid 2px #0077b6;
+    border-radius: 10px;
+    width: 90%;
+    padding: 2% 2% 20% 2%;
+}
+
+.booking-form span{
+    font-family: 'Chakra Petch', sans-serif;
+    position: absolute;
+    font-size: 1.5em;
+    right: 1%;
+    top: 1%;
+    color: red;
+}
+
+.booking-form h2{
+    text-align: center;
+    font-family: 'Fascinate', cursive;
+    color: #0077b6;
+}
+
+
+.booking-form label{
+    margin: 2% 2% 2% 2%;
+    font-family: 'Chakra Petch', sans-serif;
+
+}
+
+.booking-form .name-input{
+    position: relative;
+    margin: 2% 2% 2% 2%;
+    width: 90%;
+    border: solid 2px #0077b6;
+    border-radius: 10px;
+}
+
+.booking-form .surname-input{
+    position: relative;
+    margin: 2% 2% 2% 2%;
+    width: 90%;
+    border: solid 2px #0077b6;
+    border-radius: 10px;
+}
+
+.booking-form .email-input{
+    position: relative;
+    margin: 2% 2% 2% 2%;
+    width: 90%;
+    border: solid 2px #0077b6;
+    border-radius: 10px;
+}
+
+.booking-form select{
+    position: relative;
+    margin: 2% 2% 2% 2%;
+    width: 90%;
+    font-size: 1.2em;
+    border: solid 2px #0077b6;
+    border-radius: 10px;
+}
+
+.booking-form .date{
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 2%;
+    
+}
+
+.booking-form .date .checkIn-input{
+    position: relative;
+    width: 90%;
+    font-size: 1.2em;
+    border: solid 2px #0077b6;
+    border-radius: 10px;
+}
+
+.booking-form .date .checkOut-input{
+    position: relative;
+    width: 90%;
+    font-size: 1.2em;
+    border: solid 2px #0077b6;
+    border-radius: 10px;
+}
+
+
+.booking-form .book-btn{
+    position: absolute;
+    bottom: 2%;
+    left: 25%;
+    width: 50%;
+    background-color: #0077b6;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    padding: 2% 2% 2% 2%;
+    box-shadow: rgb(72, 72, 72) 5px 5px 7px 0px;
+}
+/* ----- MEDIA QUERIES ----- */
+
+@media (min-width: 500px){
+    .hotel-cards{
+        position: relative;
+        margin-top: 15%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .booking-form{
+        top: 20%;
+        left: 7%;
+        right: 7%;
+        border: solid 4px #0077b6;
+        width: 80%;
+        padding: 2% 2% 12% 2%;
+    }
+    
+    .booking-form h2{
+        font-size: 2.2em;
+    }
+    
+    
+    .booking-form label{
+        font-size: 1.7em;
+    }
+    
+    .booking-form .name-input{
+        font-size: 1.5em;
+    }
+    
+    .booking-form .surname-input{
+        font-size: 1.5em;
+    }
+    
+    .booking-form .email-input{
+        font-size: 1.5em;
+    }
+    
+    .booking-form select{
+        font-size: 1.7em;
+    }
+    
+    .booking-form .date{
+        margin-top: 2%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-left: 2%;   
+    }
+    
+    .booking-form .date .checkIn-input{
+        font-size: 1.7em;
+    }
+    
+    .booking-form .date .checkOut-input{
+        font-size: 1.7em;
+    }
+    
+    .booking-form .book-btn{
+        bottom: 4%;
+        font-size: 1.5em;
+        padding: 1% 2% 1% 2%;
+    }
+}
+
+@media (min-width: 1000px){
+    .hotel-cards{
+        position: relative;
+        margin-top: 6%;
+        display: grid;
+        grid-template-columns: 33.333% 33.333% 33.333%;
+    }
+
+    .booking-form{
+        top: 10%;
+        left: 7%;
+        right: 7%;
+        border: solid 4px #0077b6;
+        width: 80%;
+        padding: 2% 2% 8% 2%;
+    }
+    
+    .booking-form h2{
+        font-size: 2em;
+    }
+    
+    
+    .booking-form label{
+        font-size: 1.2em;
+    }
+    
+    .booking-form .user{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .booking-form .name-input{
+        position: relative;
+        font-size: 1.2em;
+    }
+    
+    .booking-form .surname-input{
+        position: relative;
+        font-size: 1.2em;
+    }
+    
+    .booking-form .email-input{
+        font-size: 1.2em;
+        width: 60%;
+    }
+    
+    .booking-form select{
+        font-size: 1.5em;
+        width: 70%;
+    }
+    
+    .booking-form .date{
+        margin-top: 1%;
+        display: grid;
+        grid-template-columns: 50% 60%;
+        margin-left: 2%;   
+    }
+    
+    .booking-form .date .checkIn-input{
+        font-size: 1.5em;
+        width: 70%;
+    }
+    
+    .booking-form .date .checkOut-input{
+        font-size: 1.5em;
+        width: 50%;
+    }
+    
+    .booking-form .book-btn{
+        bottom: 4%;
+        font-size: 1.3em;
+        padding: 1% 2% 1% 2%;
+    }
+}
+
+/* hotel cards */
+
+.card{
+    border-radius: 10px;
+    position: relative;
+    width: 90%;
+    margin: 7% 5% 7% 5% ;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(72, 72, 72) 5px 5px 7px 0px;
+}
+
+.hotel-img{
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    border-radius: 10px;
+}
+
+.card .info{
+    margin: 0% 2% 2% 2%;
+}
+
+.card h3{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.card .rating{
+    position: relative;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.card .rating-img{
+    position: relative;
+    top: 0.1em;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.card .desc{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.2em;
+}
+
+.card .rate{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.25em;
+    font-weight: 700;
+    padding-bottom: 22%;
+}
+
+.card button{
+    position: absolute;
+    width: 30%;
+    bottom: 2%;
+    left: 35%;
+    right: 35%;
+    /* margin: 0% 35% 2% 35%; */
+    background-color: #0077b6;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2em;
+    padding: 2% 2% 2% 2%;
+    box-shadow: rgb(72, 72, 72) 5px 5px 7px 0px;
+}
+
+.card button:active{
+    transform: scale(0.9);
+    box-shadow: 3px 3px 4.5px 0px rgb(75, 74, 74);
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@media (min-width: 500px){
+    .card{
+        margin: 4% 3% 4% 3%;
+    }
+
+    .card button{
+        font-size: 1.5em;
+    }
+
+    .card .rate{
+        padding-bottom: 17%;
+    }
+}
+
+@media (min-width: 1000px){
+    .card{
+        margin: 4% 3% 4% 3%;
+    }
+
+    .card h3{
+        font-size: 1.2em;
+    }
+    
+    .card .rating{
+        font-size: 1.1em;
+    }
+        
+    .card .desc{
+        font-size: 1.1em;
+    }
+    
+    .card .rate{
+        font-size: 1.1em;
+        padding-bottom: 15%;
+    }
+
+    .card button{
+        font-size: 1.2em;
+    }
+
+}
+
+/* booking display */
+
+.display-info fieldset{
+    width: 80%;
+    margin: 20% 5% 2% 5%;
+    border: solid 3px #0077b6;
+    font-family: 'Chakra Petch', sans-serif;
+    color: #0077b6;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.display-info h3{
+    color: black;
+    font-size: 1.2em;
+    text-decoration: underline;
+    margin: 0% 0% 0% 0%;
+}
+
+.display-info .total{
+    color: #0077b6;
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
+.display-info p{
+    color: black;
+    font-size: 1em;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.display-info .check-in-out{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.display-info .btns{
+    position: relative;
+    margin: 2% 0% 3% 0%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.display-info .compare{
+    position: relative;
+    width: 90%;
+    margin: 0% 2.5% 0% 2.5%;
+    padding: none;
+    border-radius: 10px;
+}
+
+.display-info .compare-btn{
+    background-color: #185E95;
+    font-size: 1em;
+    padding: 3% 5% 3% 5%;
+    margin: 0%;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    box-shadow: rgb(91, 91, 91) 5px 5px 7px 0px;
+}
+
+.display-info .compare-btn:active{
+    transform: scale(0.9);
+    box-shadow: 3px 3px 4.5px 0px rgb(75, 74, 74);
+}
+
+.display-info .confirm{
+    position: relative;
+    width: 90%;
+    left: 0%;
+    margin: 0% 2.5% 0% 2.5%;
+    padding: none;
+    border-radius: 10px;
+}
+
+.display-info .confirm-btn{
+    background-color: #185E95;
+    font-size: 1em;
+    padding: 3% 5% 3% 5%;
+    margin: 0%;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    box-shadow: rgb(91, 91, 91) 5px 5px 7px 0px;
+}
+
+.display-info .confirm-btn:active{
+    transform: scale(0.9);
+    box-shadow: 3px 3px 4.5px 0px rgb(75, 74, 74);
+}
+
+@media (min-width: 500px){
+    .display-info fieldset{
+        width: 70%;
+        margin: 20% 12% 2% 13%;
+        border: solid 4px #0077b6;
+    }
+
+    .display-info fieldset legend{
+        font-size: 2.5em;
+    }
+    
+    .display-info h3{
+        font-size: 2em;
+    }
+    
+    .display-info .total{
+        font-size: 2em;
+    }
+    
+    .display-info p{
+        font-size: 1.5em;
+    }
+    
+    .display-info .check-in-out{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    
+    .display-info .btns{
+        margin: 2% 0% 3% 0%;
+    }
+    
+    .display-info .compare{
+        position: relative;
+        width: 100%;
+        margin: 0% 2.5% 0% 2.5%;
+        padding: none;
+        border-radius: 10px;
+    }
+    
+    .display-info .compare-btn{
+        font-size: 1.5em;
+        position: relative;
+        width: 90%;
+        padding: 3% 5% 3% 5%;
+        margin: 0%;
+    }
+    
+    .display-info .confirm{
+        position: relative;
+        width: 100%;
+        left: 0%;
+        margin: 0% 2.5% 0% 2.5%;
+        padding: none;
+        border-radius: 10px;
+    }
+    
+    .display-info .confirm-btn{
+        font-size: 1.5em;
+        position: relative;
+        width: 90%;
+        margin: 0%;
+        padding: 3% 5% 3% 5%;
+    }
+    
+}
+
+@media (min-width: 1000px){
+    .display-info fieldset{
+        width: 70%;
+        margin: 10% 12% 2% 13%;
+        border: solid 4px #0077b6;
+    }
+
+    .display-info fieldset legend{
+        font-size: 2em;
+    }
+    
+    .display-info h3{
+        font-size: 1.7em;
+    }
+
+    .display-info .user{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    
+    .display-info .total{
+        font-size: 1.7em;
+    }
+    
+    .display-info p{
+        font-size: 1.2em;
+    }
+    
+    .display-info .check-in-out{
+        display: grid;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+
+    .display-info .hotel-img{
+        width: 86%;
+        left: 7%;
+    }
+    
+    .display-info .btns{
+        margin: 2% 0% 3% 0%;
+    }
+    
+    .display-info .compare{
+        position: relative;
+        width: 100%;
+        margin: 0% 2.5% 0% 2.5%;
+        padding: none;
+        border-radius: 10px;
+    }
+    
+    .display-info .compare-btn{
+        font-size: 1.3em;
+        position: relative;
+        width: 90%;
+        padding: 3% 5% 3% 5%;
+        margin: 0%;
+    }
+    
+    .display-info .confirm{
+        position: relative;
+        width: 100%;
+        left: 0%;
+        margin: 0% 2.5% 0% 2.5%;
+        padding: none;
+        border-radius: 10px;
+    }
+    
+    .display-info .confirm-btn{
+        font-size: 1.3em;
+        position: relative;
+        width: 90%;
+        margin: 0%;
+        padding: 3% 5% 3% 5%;
+    }
+}
+
+/* compare */
+
+.compare-info{
+    position: relative;
+    margin: 10% 0% 0% 2%;
+    width: 90%;
+    padding: 2% 5% 3% 5%;
+}
+
+.compare-info .original-booking{
+    position: relative;
+    margin-top: 10%;
+    width: 90%;
+    border-radius: 10px;
+    background-color: white;
+    border: solid #185E95 3px;
+    box-shadow: rgb(72, 72, 72) 5px 5px 7px 0px;
+}
+
+.compare-info .original-booking .hotel-img{
+    position: relative;
+    width: 96%;
+    margin: 0% 2% 0% 2%;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    border-radius: 10px;
+}
+
+.compare-info .original-booking legend{
+    font-family: 'Fascinate', cursive;
+    color: #0077b6;
+    font-size: 1.5em;
+}
+
+.compare-info .original-booking h2{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.4em;
+}
+
+.compare-info .original-booking h3{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.2em;
+}
+
+.compare-info .original-booking p{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.1em;
+}
+
+.compare-info .original-booking ol{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.1em;
+    list-style: none;
+}
+
+.compare-info .original-booking .rating-img{
+    position: relative;
+    top: 0.1em;
+    width: 1.2em;
+    height: 1.2em;
+    margin-left: 1%;
+}
+
+.compare-info .original-booking .total{
+    color: #0077b6;
+    text-decoration: underline;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+
+.compare-info .alternative-booking{
+    position: relative;
+    margin-top: 10%;
+    width: 90%;
+    border-radius: 10px;
+    background-color: white;
+    border: solid #000000 3px;
+    box-shadow: rgb(72, 72, 72) 5px 5px 7px 0px;
+}
+
+.compare-info .alternative-booking .hotel-img{
+    position: relative;
+    width: 96%;
+    margin: 0% 2% 0% 2%;
+    border-radius: 10px;
+}
+
+.compare-info .alternative-booking legend{
+    font-family: 'Fascinate', cursive;
+    color: #000000;
+    font-size: 1.5em;
+}
+
+.compare-info .alternative-booking h2{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.4em;
+}
+
+.compare-info .alternative-booking h3{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.2em;
+}
+
+.compare-info .alternative-booking p{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.1em;
+}
+
+.compare-info .alternative-booking ol{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.1em;
+    list-style: none;
+}
+
+.compare-info .alternative-booking .rating-img{
+    position: relative;
+    top: 0.1em;
+    width: 1.2em;
+    height: 1.2em;
+    margin-left: 1%;
+}
+
+.compare-info .alternative-booking .total{
+    color: #0077b6;
+    text-decoration: underline;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 500px){
+    .compare-info{
+        margin: 10% 5% 0% 5%;
+        width: 90%;
+        padding: 2% 1% 3% 1%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    
+    .compare-info .original-booking{
+        width: 86%;
+        margin: 10% 2% 1% 2%;
+        border: solid #185E95 5px;
+    }
+    
+    .compare-info .original-booking .hotel-img{
+        width: 98%;
+        margin: 0% 1% 0% 1%;
+    }
+    
+    .compare-info .original-booking legend{
+        font-size: 2em;
+    }
+    
+    .compare-info .original-booking h2{
+        font-size: 1.7em;
+    }
+    
+    .compare-info .original-booking h3{
+        font-size: 1.5em;
+    }
+    
+    .compare-info .original-booking p{
+        font-size: 1.3em;
+    }
+    
+    .compare-info .original-booking ol{
+        font-size: 1.3em;
+    }
+    
+    
+    .compare-info .original-booking .total{
+        font-size: 1.4em;
+        font-weight: 700;
+    }
+    
+    .compare-info .alternative-booking{
+        margin-top: 10%;
+        width: 90%;
+    }
+    
+    .compare-info .alternative-booking .hotel-img{
+        width: 98%;
+        margin: 0% 1% 0% 1%;
+    }
+    
+    .compare-info .alternative-booking legend{
+        font-size: 1.8em;
+    }
+    
+    .compare-info .alternative-booking h2{
+        font-size: 1.7em;
+    }
+    
+    .compare-info .alternative-booking h3{
+        font-size: 1.5em;
+    }
+    
+    .compare-info .alternative-booking p{
+        font-size: 1.3em;
+    }
+    
+    .compare-info .alternative-booking ol{
+        font-size: 1.3em;
+    }
+    
+    .compare-info .alternative-booking .total{
+        font-size: 1.4em;
+        font-weight: 700;
+    }
+}
+
+@media (min-width: 1000px){
+    .compare-info{
+        margin: 5% 0% 0% 0%;
+        width: 90%;
+        padding: 0% 5% 0% 5%;
+        display: grid;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+    
+    .compare-info .original-booking{
+        width: 90%;
+        margin: 5% 5% 1% 0%;
+        border: solid #185E95 5px;
+    }
+    
+    .compare-info .original-booking .hotel-img{
+        width: 98%;
+        margin: 0% 1% 0% 1%;
+    }
+    
+    .compare-info .original-booking legend{
+        font-size: 2em;
+    }
+    
+    .compare-info .original-booking h2{
+        font-size: 1.7em;
+    }
+    
+    .compare-info .original-booking h3{
+        font-size: 1.5em;
+    }
+    
+    .compare-info .original-booking p{
+        font-size: 1.3em;
+    }
+    
+    .compare-info .original-booking ol{
+        font-size: 1.3em;
+    }
+    
+    
+    .compare-info .original-booking .total{
+        font-size: 1.4em;
+        font-weight: 700;
+    }
+    
+    .compare-info .alternative-booking{
+        margin:5% 1% 2% 9%;
+        width: 90%;
+    }
+    
+    .compare-info .alternative-booking .hotel-img{
+        width: 98%;
+        margin: 0% 1% 0% 1%;
+    }
+    
+    .compare-info .alternative-booking legend{
+        font-size: 1.8em;
+    }
+    
+    .compare-info .alternative-booking h2{
+        font-size: 1.7em;
+    }
+    
+    .compare-info .alternative-booking h3{
+        font-size: 1.5em;
+    }
+    
+    .compare-info .alternative-booking p{
+        font-size: 1.3em;
+    }
+    
+    .compare-info .alternative-booking ol{
+        font-size: 1.3em;
+    }
+    
+    .compare-info .alternative-booking .total{
+        font-size: 1.4em;
+        font-weight: 700;
+    }
+}
+
+
+
+
+/* footer */
+
+footer{
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    width: 100%;
+    height: 5%;
+    z-index: 5;
+}
+
+footer p{
+    font-family: 'Chakra Petch', sans-serif;
+    color: rgb(101, 100, 100);
+    text-align: center;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+
+@media (min-width: 500px){
+    footer p{
+        font-size: 1.5em;
+    }
+}
+
