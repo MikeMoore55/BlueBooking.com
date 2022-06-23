@@ -5,12 +5,12 @@
     include ("/MAMP/htdocs/BlueBooking.com/src/classes/NewComparedHotelBookingInfoClass.class.php");
 
     $hotelOptionArray = $_SESSION["simpleHotelArray"];
+    $BookedHotelArray = $_SESSION["BookedHotel"];
 
-    if (isset($_POST["newConfirm"])) {
+    if (isset($_POST["confirmNewBooking"])) {
         $newSelection = $_POST["newHotelSelection"];
-        
         $newSelectedHotelArray = $hotelOptionArray["$newSelection"];
-        $BookedHotelArray = $_SESSION["BookedHotel"];
+        
 
         $hotelArray = array();
 
@@ -29,7 +29,18 @@
 
         $newSelectedHotelJson = json_encode($newSelectedHotelObject);
         file_put_contents("bookingInfo.json", $newSelectedHotelJson);
+
+        $SelectedHotel = $newSelectedHotelJson;
     }
+
+    else if (isset($_POST["confirmBooking"])) {
+
+        $originalBooking = file_get_contents("bookingInfo.json");
+        $original = json_decode($originalBooking, TRUE); 
+
+        $SelectedHotel = $original;
+    };
+
 /* //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -80,6 +91,6 @@ try {
 
 <main>
     <?php
-        print_r($newSelectedHotelObject);
+        print_r($SelectedHotel);
     ?>
 </main>

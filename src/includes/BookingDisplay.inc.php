@@ -98,7 +98,7 @@
                                         <input type="submit" name="compare" value="Compare Booking" class="compare-btn">
                                     </form>
                                     <form action="confirm" method="POST" class="confirm">
-                                        <input type="submit" name="confirm" value="Confirm Booking" class="confirm-btn">
+                                        <input type="submit" name="confirmBooking" value="Confirm Booking" class="confirm-btn">
                                     </form>
                                 </div>
                                 

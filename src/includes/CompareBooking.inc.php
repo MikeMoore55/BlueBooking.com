@@ -105,8 +105,7 @@
                     echo $selectOption;
                 ?>
             </select>
-            <input id="book-btn" type="submit" class="book-btn" name="newConfirm" value="confirm">
-
+            <input id="book-btn" type="submit" class="book-btn" name="confirmNewBooking" value="confirm">
         </div>
     </div>
    
