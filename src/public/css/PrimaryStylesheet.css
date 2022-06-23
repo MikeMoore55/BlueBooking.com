@@ -5,7 +5,7 @@ body{
 /* header */
 
 header{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 8%;
     top: 0%;
@@ -690,7 +690,69 @@ header h1{
 
 /* compare */
 
+.compare-info{
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    right: 0%;
+    width: 90%;
+    padding: 2% 5% 3% 5%;
+}
 
+.compare-info .original-booking{
+    position: relative;
+    width: 90%;
+    border-radius: 10px;
+    background-color: white;
+    border: solid #185E95 3px;
+}
+
+.compare-info .original-booking legend{
+    font-family: 'Fascinate', cursive;
+    color: #0077b6;
+    font-size: 1.5em;
+}
+
+.compare-info .original-booking h2{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.4em;
+}
+
+.compare-info .original-booking span{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.2em;
+}
+
+.compare-info .original-booking h3{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.2em;
+}
+
+.compare-info .original-booking p{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.1em;
+}
+
+.compare-info .original-booking ul{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.1em;
+    list-style: none;
+}
+
+.compare-info .original-booking .rating-img{
+    position: relative;
+    top: 0.1em;
+    width: 1.2em;
+    height: 1.2em;
+    margin-left: 1%;
+}
+
+.compare-info .alternative-booking{
+    position: relative;
+}
+
+/* 
+} */
 
 
 
