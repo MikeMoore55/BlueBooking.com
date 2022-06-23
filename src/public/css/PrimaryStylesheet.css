@@ -691,20 +691,29 @@ header h1{
 /* compare */
 
 .compare-info{
-    position: absolute;
-    top: 10%;
-    left: 0%;
-    right: 0%;
+    position: relative;
+    margin: 10% 0% 0% 2%;
     width: 90%;
     padding: 2% 5% 3% 5%;
 }
 
 .compare-info .original-booking{
     position: relative;
+    margin-top: 10%;
     width: 90%;
     border-radius: 10px;
     background-color: white;
     border: solid #185E95 3px;
+}
+
+.compare-info .original-booking .hotel-img{
+    position: relative;
+    width: 96%;
+    margin: 0% 2% 0% 2%;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    border-radius: 10px;
 }
 
 .compare-info .original-booking legend{
@@ -718,11 +727,6 @@ header h1{
     font-size: 1.4em;
 }
 
-.compare-info .original-booking span{
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-size: 1.2em;
-}
-
 .compare-info .original-booking h3{
     font-family: 'Kdam Thmor Pro', sans-serif;
     font-size: 1.2em;
@@ -733,7 +737,7 @@ header h1{
     font-size: 1.1em;
 }
 
-.compare-info .original-booking ul{
+.compare-info .original-booking ol{
     font-family: 'Kdam Thmor Pro', sans-serif;
     font-size: 1.1em;
     list-style: none;
@@ -747,12 +751,70 @@ header h1{
     margin-left: 1%;
 }
 
-.compare-info .alternative-booking{
-    position: relative;
+.compare-info .original-booking .total{
+    color: #0077b6;
+    text-decoration: underline;
+    font-size: 1.2em;
+    font-weight: 700;
 }
 
-/* 
-} */
+.compare-info .alternative-booking{
+    position: relative;
+    margin-top: 10%;
+    width: 90%;
+    border-radius: 10px;
+    background-color: white;
+    border: solid #000000 3px;
+}
+
+.compare-info .alternative-booking .hotel-img{
+    position: relative;
+    width: 96%;
+    margin: 0% 2% 0% 2%;
+    border-radius: 10px;
+}
+
+.compare-info .alternative-booking legend{
+    font-family: 'Fascinate', cursive;
+    color: #000000;
+    font-size: 1.5em;
+}
+
+.compare-info .alternative-booking h2{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.4em;
+}
+
+.compare-info .alternative-booking h3{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.2em;
+}
+
+.compare-info .alternative-booking p{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.1em;
+}
+
+.compare-info .alternative-booking ol{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.1em;
+    list-style: none;
+}
+
+.compare-info .alternative-booking .rating-img{
+    position: relative;
+    top: 0.1em;
+    width: 1.2em;
+    height: 1.2em;
+    margin-left: 1%;
+}
+
+.compare-info .alternative-booking .total{
+    color: #0077b6;
+    text-decoration: underline;
+    font-size: 1.2em;
+    font-weight: 700;
+}
 
 
 

@@ -3,6 +3,8 @@
 
     include ("/MAMP/htdocs/BlueBooking.com/src/includes/HotelInitialization.inc.php");
     include ("/MAMP/htdocs/BlueBooking.com/src/classes/HotelBookingInfoClass.class.php");
+    include ("/MAMP/htdocs/BlueBooking.com/src/functions/calcCost.func.php");
+    include ("/MAMP/htdocs/BlueBooking.com/src/functions/calcDays.func.php");
     
     /* take json, convert to array */
     $Hotels = hotelOptionsArray();
@@ -26,19 +28,23 @@
             <legend>Your Booking</legend>
             <?php
                 foreach ($BookingArray as $BookingInfo => $Booking) {
+
+                    $days = calcDays($Booking["checkIn"], $Booking["checkOut"]);
+                    $total = calcCosts($days, $Booking["rate"]);
+
                     echo 
                         '
                             <h2>'.$Booking["hotel"].'</h2>
-                            <img class="hotel-img" src="'.$Booking["image"].'"
-                            <p><span>Rate :</span>'.$Booking["rate"].'</p>
+                            <img class="hotel-img" src="'.$Booking["image"].'">
+                            <p>Rate : R'.$Booking["rate"].'/night</p>
                             <p>'.$Booking["rating"].'<img class="rating-img" src="./src/public/images/star.png"></p>
                             <h3>Amenities: </h3>
-                            <ul>
+                            <ol>
                                 <li>Pool: '.$Booking["pool"].'</li>
                                 <li>Spa: '.$Booking["spa"].'</li>
-                                <li>Restaurant: '.$Booking["restaurant"].'</li>
-                                <li>Child-Friendly: '.$Booking["childFriendly"].'</li>
-                            </ul>
+                                <li>Restaurant: '.$Booking["restaurant"].'</li>                            </ol>
+                            <p>Child-Friendly: '.$Booking["childFriendly"].'</p>
+                            <p class="total">Total: '.$total.'</p>
                         ';
                 }
             ?>
@@ -46,17 +52,20 @@
         <?php
             foreach ($alternativeOptions as $option => $value) {
                 echo '
-                    <div class="alternative-booking">
+                    <fieldset class="alternative-booking">
+                    <legend>Alternative Option</legend>
                         <h2>'.$option.'</h2>
+                        <img class="hotel-img" src="'.$value["image"].'">
                         <p>Rate:'.$value["rate"].'</p>
                         <p>'.$value["rating"].'<img class="rating-img" src="./src/public/images/star.png"></p>
-                        <ul>
+                        <h3>Amenities: </h3>
+                        <ol>
                             <li>Pool: '.$value["pool"].'</li>
                             <li>Spa: '.$value["spa"].'</li>
                             <li>Restaurant: '.$value["restaurant"].'</li>
-                            <li>ChildFriendly: '.$value["childFriendly"].'</li>
-                        </ul>
-                    </div>
+                        </ol>
+                        <p>ChildFriendly: '.$value["childFriendly"].'</p>
+                    </fieldset>
                     ';
             }
         ?>
