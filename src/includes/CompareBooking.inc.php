@@ -12,6 +12,12 @@
     $Booking = file_get_contents("bookingInfo.json");
     $BookingArray = json_decode($Booking, TRUE);
 
+    /* loop through the booking Info to get total days, to use in comparison */
+    foreach ($BookingArray as $key => $i) {
+        $days = calcDays($i["checkIn"], $i["checkOut"]);
+    }
+    
+    
     $hotelOptionArray = $_SESSION["simpleHotelArray"];
     $selectedHotelName = $_SESSION["selectedHotel"];
 
@@ -29,7 +35,6 @@
             <?php
                 foreach ($BookingArray as $BookingInfo => $Booking) {
 
-                    $days = calcDays($Booking["checkIn"], $Booking["checkOut"]);
                     $total = calcCosts($days, $Booking["rate"]);
 
                     echo 
@@ -65,6 +70,7 @@
                             <li>Restaurant: '.$value["restaurant"].'</li>
                         </ol>
                         <p>ChildFriendly: '.$value["childFriendly"].'</p>
+                        <p class="total">'.$total = calcCosts($days, $value["rate"]).'</p>
                     </fieldset>
                     ';
             }
