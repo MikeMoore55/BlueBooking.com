@@ -14,6 +14,8 @@
     $Booking = file_get_contents("bookingInfo.json");
     $BookingArray = json_decode($Booking, TRUE);
 
+    $_SESSION["BookedHotel"] = $BookingArray;
+
     /* loop through the booking Info to get total days, to use in comparison */
     foreach ($BookingArray as $key => $i) {
         $days = calcDays($i["checkIn"], $i["checkOut"]);

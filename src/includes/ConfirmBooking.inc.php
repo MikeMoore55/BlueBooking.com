@@ -10,6 +10,25 @@
         $newSelection = $_POST["newHotelSelection"];
         
         $newSelectedHotelArray = $hotelOptionArray["$newSelection"];
+        $BookedHotelArray = $_SESSION["BookedHotel"];
+
+        $hotelArray = array();
+
+        foreach ($BookedHotelArray as $Hotel => $value) {
+            $checkIn = $value["checkIn"];
+            $checkOut = $value["checkOut"];
+            $userName = $value["name"];
+            $userSurname = $value["surname"];
+            $userEmail = $value["email"];
+        };
+
+        $newBooking = BookingInformation::createBooking($userName, $userSurname, $userEmail, $newSelection, $newSelectedHotelArray["image"], $newSelectedHotelArray["rating"], $newSelectedHotelArray["desc"], $newSelectedHotelArray["pool"], $newSelectedHotelArray["wifi"], $newSelectedHotelArray["spa"], $newSelectedHotelArray["restaurant"], $newSelectedHotelArray["childFriendly"] ,$checkIn, $checkOut, $newSelectedHotelArray["rate"]);
+        
+        $newSelectedHotelObject = [];
+        array_push($newSelectedHotelObject, $newBooking);
+
+        $newSelectedHotelJson = json_encode($newSelectedHotelObject);
+        file_put_contents("bookingInfo.json", $newSelectedHotelJson);
     }
 /* //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
@@ -61,6 +80,6 @@ try {
 
 <main>
     <?php
-        print_r($newSelectedHotelArray)
+        print_r($newSelectedHotelObject);
     ?>
 </main>
