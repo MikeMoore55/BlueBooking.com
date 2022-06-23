@@ -92,14 +92,13 @@
     </div>
 
 
-
     <div id="new-book-div" class="new-book-div">
         <form id="new-booking-form" class="new-booking-form" method="POST" action="confirm">
             <span onclick="hideNewBook()">X</span>
             <h4>Book an Alternative Hotel</h4>
-            <label for="hotelSelection">Choose the Alternative Hotel:</label>
+            <label for="newHotelSelection">Choose the Alternative Hotel:</label>
                 <br>
-            <select name="hotelSelection">
+            <select name="newHotelSelection">
                 <?php
                     echo $selectOption;
                 ?>
