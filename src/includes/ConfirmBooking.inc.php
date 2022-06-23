@@ -30,7 +30,10 @@
         $newSelectedHotelJson = json_encode($newSelectedHotelObject);
         file_put_contents("bookingInfo.json", $newSelectedHotelJson);
 
-        $SelectedHotel = $newSelectedHotelJson;
+        $newSelectedBooking = file_get_contents("bookingInfo.json");
+        $newSelectedBookingArray = json_decode($newSelectedBooking, TRUE);
+
+        $SelectedHotel = $newSelectedBookingArray;
     }
 
     else if (isset($_POST["confirmBooking"])) {
