@@ -74,7 +74,7 @@ $Hotels = hotelOptionsArray();
                     <input type="date" name="checkOut" class="checkOut-input" require>
 
                 </div>
-
+                <p id="erorr-msg">Error, your stay must be longer than 0 days</p>
             </div>
 
             <input class="book-btn" type="submit" name="Book" value="Make Booking">

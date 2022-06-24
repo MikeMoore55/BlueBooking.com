@@ -1,4 +1,6 @@
 <?php
+
+/* this takes the users booking infomation, and saves it to a json folder, for future use  */
     class BookingInformation{
 
         public $name;
@@ -38,7 +40,7 @@
         }
 
     
-    
+    /* methods */
         public function calcDays(){
             $dayDifference = date_diff(date_create($this->checkIn), date_create($this->checkOut));
             $amountOfDays = $dayDifference->format('%a');
@@ -62,10 +64,6 @@
             
         public static function createBooking($userName, $userSurname, $userEmail, $hotelName, $hotelImage, $hotelRating, $hotelDescription, $hotelPool,$hotelWifi, $hotelSpa, $hotelRestaurant, $hotelChildFriendly, $checkInDate, $checkOutDate, $hotelRate){
             if ($checkInDate >= $checkOutDate) {
-                echo "
-                <script>
-                    alert('Error, your stay at $hotelName must be longer than 1 night');
-                </script>";
                 header("Location: home"); 
     
             } else {
