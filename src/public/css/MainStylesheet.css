@@ -1,3 +1,5 @@
+/* this is the one and only stylesheet for the project, tried haveing mulitple but ended up causing problems */
+
 * {
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -59,12 +61,12 @@
   
   @media (min-width: 1000px) {
     header {
-      height: 12%;
+      height: 13%;
       padding-bottom: 2%;
     }
   
     header .header-img {
-      width: 6%;
+      width: 4%;
       height: 100%;
       margin-left: 1%;
       margin-top: 1%;
@@ -72,7 +74,7 @@
   
     header h1 {
       margin-left: 1%;
-      font-size: 1.9em;
+      font-size: 1.7em;
     }
   }
   
@@ -1062,9 +1064,9 @@
   
   @media (min-width: 1000px) {
     .compare-info {
-      margin: 3% 0% 0% 0%;
-      width: 90%;
-      padding: 0% 5% 0% 5%;
+      margin: 4% 0% 0% 0%;
+      width: 100%;
+      padding: 0% 3% 0% 3%;
       display: grid;
       grid-template-columns: 33.33% 33.33% 33.33%;
     }
@@ -1108,8 +1110,8 @@
     .compare-info .original-booking .confirm-original {
       position: relative;
       font-family: "Kdam Thmor Pro", sans-serif;
-      width: 50%;
-      margin: 0.5% 23% 0.5% 23%;
+      width: 60%;
+      margin: 0.5% 18% 0.5% 18%;
       background-color: #0077b6;
       border-radius: 10px;
       border: none;
@@ -1156,8 +1158,8 @@
     .compare-info .alternative-booking .confirm-alternative {
       position: relative;
       font-family: "Kdam Thmor Pro", sans-serif;
-      width: 50%;
-      margin: 0.5% 23% 0.5% 23%;
+      width: 76%;
+      margin: 0.5% 12% 0.5% 12%;
       background-color: #0077b6;
       border-radius: 10px;
       border: none;
