@@ -73,19 +73,20 @@
         <body style="font-family:Arial, Helvetica, sans-serif;">
             <p>Greetings '.$Booking["name"] .' '.$Booking["surname"].'</p>
             <br>
-            <br>
             <p>Your Booking at <b>'.$Booking["hotel"].'</b> has been Booked.</p>
-            <br>
-            <p><b>Nightly Rate: </b>'.$Booking["rate"].' ZAR / day</p>
+            <h4>Booking Info:</h4>
             <div style="display: grid; grid-template-columns: 50% 50%;">
                 <p><b>Check In: </b>'.$Booking["checkIn"].'</p>
                 <p><b>Check Out: </b>'.$Booking["checkOut"].'</p>
             </div>
+            <p><b>Nightly Rate: </b>'.$Booking["rate"].' ZAR / day</p>
             <p><b>Total Stay: </b>'.$days = calcDays($$Booking["checkIn"], $Booking["checkOut"]).' day/s</p>
             <p><b>Total Amount: </b>'.calcCosts(calcDays($$Booking["checkIn"], $Booking["checkOut"]), $Booking["rate"]).' ZAR</p>
             <br>
+            <p>Thank you for using <span style="font-size: 1.2em; font-weight: 700;">BlueBooking.com</span></p>
+            <p style="font-size: 0.7em;">©2022 BlueBooking.com</p>
             <br>
-            <p>Thank you for using <span style="font-size: 1.2em">BlueBooking.com</span></p>
+            <img src="/MAMP/htdocs/BlueBooking.com/src/public/images/BlueBooking-logo.png">
         </body>
         </html>
         ';
