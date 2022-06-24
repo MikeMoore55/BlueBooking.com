@@ -3,6 +3,8 @@
 /* this takes the users booking infomation, and saves it to a json folder, for future use  */
     class BookingInformation{
 
+         /* seems alot, but i wanted to originally, list the following out in the email, but don,t have enough time */
+
         public $name;
         public $surname;
         public $email;
@@ -66,7 +68,11 @@
             if ($checkInDate >= $checkOutDate) {
                 echo '<script>alert("Your Stay cannot be less than 1 day, please go back and correct you booking")</script>';
     
-            } else {
+            }
+            elseif($userName == null && $userSurname == null){
+                echo '<script>alert("Why did you leave your name or surname blank, please go back and correct you booking")</script>';
+            }
+            else {
     
                 $newBooking = new BookingInformation($userName, $userSurname, $userEmail, $hotelName, $hotelImage, $hotelRating, $hotelDescription, $hotelPool,$hotelWifi, $hotelSpa, $hotelRestaurant, $hotelChildFriendly, $checkInDate, $checkOutDate, $hotelRate);
 
