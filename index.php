@@ -53,6 +53,9 @@
             case '/confirm':
                 require __DIR__ . '/src/includes/ConfirmBooking.inc.php';
                 break;
+            case '/confirmNew':
+                require __DIR__ . '/src/includes/ConfirmBooking.inc.php';
+                break;
         
         default:
             http_response_code(404);

@@ -8,7 +8,6 @@
     include ("/MAMP/htdocs/BlueBooking.com/src/includes/BookingForm.inc.php");
 
     /* session variables */
-    $_SESSION["BookedHotel"] = $BookingArray;
     $hotelOptionArray = $_SESSION["simpleHotelArray"];
     $selectedHotelName = $_SESSION["selectedHotel"];
 
@@ -17,7 +16,8 @@
 
     $Booking = file_get_contents("bookingInfo.json");
     $BookingArray = json_decode($Booking, TRUE);
-
+    /* create new session variable */
+    $_SESSION["BookedHotel"] = $BookingArray;
     /* loop through the booking Info to get total days, to use in comparison */
     foreach ($BookingArray as $key => $i) {
         $days = calcDays($i["checkIn"], $i["checkOut"]);
@@ -97,7 +97,7 @@
 
     <!-- form that appears to book either one of the alternatives -->
     <div id="new-book-div" class="new-book-div">
-        <form id="new-booking-form" class="new-booking-form" action="confirm" method="POST" >
+        <form action="confirmNew" method="POST" >
             <span onclick="hideNewBook()">X</span>
             <h4>Book an Alternative Hotel</h4>
             <label for="newHotelSelection">Choose the Alternative Hotel:</label>
@@ -107,7 +107,7 @@
                     echo $selectOption;
                 ?>
             </select>
-            <input id="book-btn" type="submit" class="book-btn" name="confirmNewBooking" value="confirm">
+            <input type="submit" class="book-btn" name="confirmNewBooking" value="confirm">
         </div>
     </div>
    

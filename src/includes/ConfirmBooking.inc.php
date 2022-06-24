@@ -6,14 +6,16 @@
     include ("/MAMP/htdocs/BlueBooking.com/src/functions/calcCost.func.php");
     include ("/MAMP/htdocs/BlueBooking.com/src/functions/calcDays.func.php");
 
-    /* session variables */
-    $hotelOptionArray = $_SESSION["simpleHotelArray"];
-    $BookedHotelArray = $_SESSION["BookedHotel"];
 
     /* if "Book Alternative Hotel" is clicked then */
     if (isset($_POST["confirmNewBooking"])) {
 
         $newSelection = $_POST["newHotelSelection"];
+        
+        /* session variables */
+        $BookedHotelArray = $_SESSION["BookedHotel"];
+        $hotelOptionArray = $_SESSION["simpleHotelArray"];
+       
         $newSelectedHotelArray = $hotelOptionArray["$newSelection"];
 
         $hotelArray = array();
@@ -47,9 +49,9 @@
         /* the alternative hotel is the selected hotel now */
         $SelectedHotel = $newSelectedBookingArray;
     }
-
+  
     /* if the "confirm booking" btn was clicked */
-    else if (isset($_POST["confirmBooking"])) {
+    else{
         /* we get the original booking info from Json */
         $originalBooking = file_get_contents("bookingInfo.json");
         /* create array from original booking */
@@ -57,12 +59,14 @@
         /* original booking is now the selected hotel */
         $SelectedHotel = $original;
     };
+    
+    print_r($SelectedHotel);
 
-
+  
     foreach ($SelectedHotel as $Hotel => $Booking) {
         /* how the email should appear */
         
-        /* calcDays & calcCost = predefined functions */
+        /* calcDays & calcCost = predefined functions*/ 
         $body .= 
         '
         <html>
@@ -136,4 +140,4 @@ try {
               
         ?>
     </div>
-</main>
+</main> 
