@@ -85,30 +85,10 @@
             <br>
             <p>Thank you for using <span style="font-size: 1.2em; font-weight: 700;">BlueBooking.com</span></p>
             <p style="font-size: 0.7em;">2022 BlueBooking.com</p>
-            <br>
-            <img src="src/public/images/BlueBooking-logo.png">
         </body>
         </html>
         ';
         
-        
-        
-        
-        
-        /* '  <p <style>font-family: </s>>Greetings '.$Booking["name"] .' '.$Booking["surname"].'</p>
-                    <br>
-                    <br>
-                    <p>Your Booking at <b>'.$Booking["hotel"].'</b> has been Booked.</p>
-                    <br>
-                    <p><b>Nightly Rate: </b>'.$Booking["rate"].' ZAR / day</p>
-                    <p><b>Check In: </b>'.$Booking["checkIn"].'</p>
-                    <p><b>Check Out: </b>'.$Booking["checkOut"].'</p>
-                    <p><b>Total Stay: </b>'.$days = calcDays($$Booking["checkIn"], $Booking["checkOut"]).' day/s</p>
-                    <p><b>Total Amount: </b>'.calcCosts(calcDays($$Booking["checkIn"], $Booking["checkOut"]), $Booking["rate"]).' ZAR</p>
-                    <br>
-                    <br>
-                    <p>Thank you for using BlueBooking.com</p>
-                    '; */
         $email = $Booking["email"];        
     };
 use PHPMailer\PHPMailer\PHPMailer;
@@ -126,13 +106,13 @@ try {
     $mail->SMTPDebug = 1;                     
     $mail->isSMTP();                                          
     $mail->Host       = 'smtp.mailtrap.io';            //mailtrap is a free smpt for email testing         
-    $mail->SMTPAuth   = true;                          // MARKERS: create a free mailtrap.io account to receive email         
-    $mail->Username   = '74850f4b25d8c4';                    
-    $mail->Password   = '03aaae6f7b04c4';                             
-    $mail->SMTPSecure = 'tls';           
+    $mail->SMTPAuth   = true;                          // MARKERS: create a free mailtrap.io account to see emails          
+    $mail->Username   = '74850f4b25d8c4';              // MARKERS: use your credentials from mailtrap.io here so you become the "sender" to see emails     
+    $mail->Password   = '03aaae6f7b04c4';              // MARKERS: use your credentials from mailtrap.io here so you become the "sender" to see emails                
+    $mail->SMTPSecure = 'tls';                         // or ask me to send you a screen shot of your booking email once you have booked
     $mail->Port       = 2525;                                   
 
-    $mail->setFrom('michaelwillemmoore@gmail.com', 'Mailer');
+    $mail->setFrom('BlueBooking@bluebook.com', 'CONFIRMATION');
     $mail->addAddress($email);
 
 
