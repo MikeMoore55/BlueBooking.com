@@ -63,7 +63,38 @@
         /* how the email should appear */
         
         /* calcDays & calcCost = predefined functions */
-        $body .= '  <p <style>font-family: </style>>Greetings '.$Booking["name"] .' '.$Booking["surname"].'</p>
+        $body .= 
+        '
+        <html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <title></title>
+        </head>
+        <body style="font-family:Arial, Helvetica, sans-serif;">
+            <p>Greetings '.$Booking["name"] .' '.$Booking["surname"].'</p>
+            <br>
+            <br>
+            <p>Your Booking at <b>'.$Booking["hotel"].'</b> has been Booked.</p>
+            <br>
+            <p><b>Nightly Rate: </b>'.$Booking["rate"].' ZAR / day</p>
+            <div style="display: grid; grid-template-columns: 50% 50%;">
+                <p><b>Check In: </b>'.$Booking["checkIn"].'</p>
+                <p><b>Check Out: </b>'.$Booking["checkOut"].'</p>
+            </div>
+            <p><b>Total Stay: </b>'.$days = calcDays($$Booking["checkIn"], $Booking["checkOut"]).' day/s</p>
+            <p><b>Total Amount: </b>'.calcCosts(calcDays($$Booking["checkIn"], $Booking["checkOut"]), $Booking["rate"]).' ZAR</p>
+            <br>
+            <br>
+            <p>Thank you for using <span style="font-size: 1.2em">BlueBooking.com</span></p>
+        </body>
+        </html>
+        ';
+        
+        
+        
+        
+        
+        /* '  <p <style>font-family: </s>>Greetings '.$Booking["name"] .' '.$Booking["surname"].'</p>
                     <br>
                     <br>
                     <p>Your Booking at <b>'.$Booking["hotel"].'</b> has been Booked.</p>
@@ -76,7 +107,7 @@
                     <br>
                     <br>
                     <p>Thank you for using BlueBooking.com</p>
-                    ';
+                    '; */
         $email = $Booking["email"];        
     };
 use PHPMailer\PHPMailer\PHPMailer;
