@@ -84,9 +84,9 @@
             <p><b>Total Amount: </b>'.calcCosts(calcDays($$Booking["checkIn"], $Booking["checkOut"]), $Booking["rate"]).' ZAR</p>
             <br>
             <p>Thank you for using <span style="font-size: 1.2em; font-weight: 700;">BlueBooking.com</span></p>
-            <p style="font-size: 0.7em;">©2022 BlueBooking.com</p>
+            <p style="font-size: 0.7em;">2022 BlueBooking.com</p>
             <br>
-            <img src="/MAMP/htdocs/BlueBooking.com/src/public/images/BlueBooking-logo.png">
+            <img src="src/public/images/BlueBooking-logo.png">
         </body>
         </html>
         ';
