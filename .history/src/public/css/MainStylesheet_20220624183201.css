@@ -1064,7 +1064,7 @@
   
   @media (min-width: 1000px) {
     .compare-info {
-      margin: 4% 0% 0% 0%;
+      margin: 3% 0% 0% 0%;
       width: 100%;
       padding: 0% 3% 0% 3%;
       display: grid;
@@ -1079,7 +1079,7 @@
   
     .compare-info .original-booking .hotel-img {
       width: 66%;
-      margin: 0% 18% 0% 18%;
+      margin: 0% 17% 0% 17%;
     }
   
     .compare-info .original-booking legend {
@@ -1087,7 +1087,7 @@
     }
   
     .compare-info .original-booking h2 {
-      font-size: 1em;
+      font-size: 0.9em;
     }
   
     .compare-info .original-booking h3 {
@@ -1135,11 +1135,11 @@
     }
   
     .compare-info .alternative-booking h2 {
-      font-size: 1em;
+      font-size: 0.9em;
     }
   
     .compare-info .alternative-booking h3 {
-      font-size: 1em;
+      font-size: 0.9em;
     }
   
     .compare-info .alternative-booking p {

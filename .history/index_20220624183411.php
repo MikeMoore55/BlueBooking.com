@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
     <!-- css stylesheet -->
-    <link rel="stylesheet" href="./src/public/css/PrimaryStylesSheet.css">
+    <link rel="stylesheet" href="./src/public/css/PrimaryStyleSheet.css">
 </head>
 <body>
     <?php

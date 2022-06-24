@@ -1,7 +1,7 @@
 <?php
 
     require("/MAMP/htdocs/BlueBooking.com/src/classes/HotelClass.class.php"); 
-    /* not in functions folder for various reasons */
+
     function initialize(){
     /* we create a populated array using the setup from the HotelClass.class.php */ 
         $hotelListArray = [

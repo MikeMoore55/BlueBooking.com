@@ -61,7 +61,7 @@
                                 <input class="confirm-original" type="submit" name="confirm" value="Confirm Booking" class="confirm-btn">
                             </form>
                         ';
-                };
+                }
             ?>
         </fieldset>
 

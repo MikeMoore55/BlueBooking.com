@@ -30,7 +30,7 @@
     $options = $hotelOptionArray;
     /* only have to options appear */
     $alternativeOptions = array_slice($options, 0, 2);
-    /* future update - filter through and get options in similar locations/price range/rating (should have done it but i did not have enough time) */
+    /* future update - filter through and get options in similar locations/price range */
 ?>
 
 <main>
@@ -61,13 +61,12 @@
                                 <input class="confirm-original" type="submit" name="confirm" value="Confirm Booking" class="confirm-btn">
                             </form>
                         ';
-                };
+                }
             ?>
         </fieldset>
 
         <?php
             /* 2 alternatives display */
-            /* can be made 3+ if wanted, i prefer 2 */
             foreach ($alternativeOptions as $option => $value) {
                 $selectOption .= '<option>'.$option.'</option>';
                 echo '
@@ -90,8 +89,9 @@
                         </button> 
                     </fieldset>
                     ';
-            };
+            }
         ?>
+
     </div>
 
     <!-- form that appears to book either one of the alternatives -->

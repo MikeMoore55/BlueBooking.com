@@ -1,5 +1,3 @@
-<!-- Think of this as a "receipt" of the original booking -->
-
 <?php
 session_start();
 

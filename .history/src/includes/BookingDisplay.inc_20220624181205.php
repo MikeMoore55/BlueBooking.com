@@ -1,5 +1,3 @@
-<!-- Think of this as a "receipt" of the original booking -->
-
 <?php
 session_start();
 
@@ -59,7 +57,7 @@ if (isset($_POST["Book"])) {
                             <div class="user">
                                 <div class="name">
                                     <h3>User: </h3>
-                                    <p>' . $booking->fullName() . '</p> 
+                                    <p>' . $booking->fullName() . '</p>
                                 </div>
                                 <div class="email">
                                     <h3>Email: </h3>
