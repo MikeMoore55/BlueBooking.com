@@ -7,36 +7,36 @@
     include ("/MAMP/htdocs/BlueBooking.com/src/functions/calcDays.func.php");
     include ("/MAMP/htdocs/BlueBooking.com/src/includes/BookingForm.inc.php");
 
-    
+    /* session variables */
+    $_SESSION["BookedHotel"] = $BookingArray;
+    $hotelOptionArray = $_SESSION["simpleHotelArray"];
+    $selectedHotelName = $_SESSION["selectedHotel"];
+
     /* take json, convert to array */
     $Hotels = hotelOptionsArray();
 
     $Booking = file_get_contents("bookingInfo.json");
     $BookingArray = json_decode($Booking, TRUE);
 
-    $_SESSION["BookedHotel"] = $BookingArray;
-
     /* loop through the booking Info to get total days, to use in comparison */
     foreach ($BookingArray as $key => $i) {
         $days = calcDays($i["checkIn"], $i["checkOut"]);
     }
     
-    
-    $hotelOptionArray = $_SESSION["simpleHotelArray"];
-    $selectedHotelName = $_SESSION["selectedHotel"];
-
+    /* "remove" selected hotel from hotel array to get comparative options */
     unset($hotelOptionArray["$selectedHotelName"]);
 
     $options = $hotelOptionArray;
+    /* only have to options appear */
     $alternativeOptions = array_slice($options, 0, 2);
+    /* future update - filter through and get options in similar locations/price range */
 ?>
-
-<script src="./src/public/js/form.js" defer></script>
-
+<!-- 
+<script src="./src/public/js/form.js" defer></script> -->
 
 <main>
     <div class="compare-info">
-
+        <!-- original booking display -->
         <fieldset class="original-booking">
             <legend>Your Booking</legend>
             <?php
@@ -67,6 +67,7 @@
         </fieldset>
 
         <?php
+            /* 2 alternatives display */
             foreach ($alternativeOptions as $option => $value) {
                 $selectOption .= '<option>'.$option.'</option>';
                 echo '
@@ -94,7 +95,7 @@
 
     </div>
 
-
+    <!-- form that appears to book either one of the alternatives -->
     <div id="new-book-div" class="new-book-div">
         <form id="new-booking-form" class="new-booking-form" method="POST" action="confirm">
             <span onclick="hideNewBook()">X</span>
