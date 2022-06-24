@@ -6,17 +6,22 @@
     include ("/MAMP/htdocs/BlueBooking.com/src/functions/calcCost.func.php");
     include ("/MAMP/htdocs/BlueBooking.com/src/functions/calcDays.func.php");
 
+    /* session variables */
     $hotelOptionArray = $_SESSION["simpleHotelArray"];
     $BookedHotelArray = $_SESSION["BookedHotel"];
 
+    /* if "Book Alternative Hotel" is clicked then */
     if (isset($_POST["confirmNewBooking"])) {
+
         $newSelection = $_POST["newHotelSelection"];
         $newSelectedHotelArray = $hotelOptionArray["$newSelection"];
-        
 
         $hotelArray = array();
 
+        /* loop through old booking array to get booking info like user name, surname, email & dates */
+        /* i do it this way to avoid "over using sessions" although the overall outcome will be the same */
         foreach ($BookedHotelArray as $Hotel => $value) {
+            /* this means user doesn't have to re-enter this info again */
             $checkIn = $value["checkIn"];
             $checkOut = $value["checkOut"];
             $userName = $value["name"];
@@ -24,33 +29,40 @@
             $userEmail = $value["email"];
         };
 
+        /* Create a new booking based of the BookingInformation Class */
         $newBooking = BookingInformation::createBooking($userName, $userSurname, $userEmail, $newSelection, $newSelectedHotelArray["image"], $newSelectedHotelArray["rating"], $newSelectedHotelArray["desc"], $newSelectedHotelArray["pool"], $newSelectedHotelArray["wifi"], $newSelectedHotelArray["spa"], $newSelectedHotelArray["restaurant"], $newSelectedHotelArray["childFriendly"] ,$checkIn, $checkOut, $newSelectedHotelArray["rate"]);
         
+        /* empty array for storing the new booking info */
         $newSelectedHotelObject = [];
+        /* we push the new booking info to the array*/
         array_push($newSelectedHotelObject, $newBooking);
 
+        /* we replace old booking info in Json file with the new Booking */
         $newSelectedHotelJson = json_encode($newSelectedHotelObject);
         file_put_contents("bookingInfo.json", $newSelectedHotelJson);
 
         $newSelectedBooking = file_get_contents("bookingInfo.json");
         $newSelectedBookingArray = json_decode($newSelectedBooking, TRUE);
 
+        /* the alternative hotel is the selected hotel now */
         $SelectedHotel = $newSelectedBookingArray;
     }
 
+    /* if the "confirm booking" btn was clicked */
     else if (isset($_POST["confirmBooking"])) {
-
+        /* we get the original booking info from Json */
         $originalBooking = file_get_contents("bookingInfo.json");
+        /* create array from original booking */
         $original = json_decode($originalBooking, TRUE); 
-
+        /* original booking is now the selected hotel */
         $SelectedHotel = $original;
     };
 
 
     foreach ($SelectedHotel as $Hotel => $Booking) {
-        $totalDays = calcDays($$Booking["checkIn"], $Booking["checkOut"]);
-        $totalCosts = calcCosts($totalDays, $$Booking["rate"]);
+        /* how the email should appear */
         
+        /* calcDays & calcCost = predefined functions */
         $body .= '  <p>Greetings '.$Booking["name"] .' '.$Booking["surname"].'</p>
                     <br>
                     <br>
@@ -64,46 +76,37 @@
                     <br>
                     <br>
                     <p>Thank you for using BlueBooking.com</p>
-                    ';
-        $email = $Booking["email"];
-        $hotelCheckIn = $Booking["checkIn"];
-        $hotelCheckOut = $Booking["checkOut"];
-        $hotelRate = $Booking["rate"];
-
-        
+                    ';        
     };
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-//Load Composer's autoloader
+/* Load Composer's autoloader */
 require 'vendor/autoload.php';
 
-//Create an instance; passing `true` enables exceptions
+/* Create an instance; passing `true` enables exceptions */
 $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = 1;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.mailtrap.io';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = '74850f4b25d8c4';                     //SMTP username
-    $mail->Password   = '03aaae6f7b04c4';                               //SMTP password
-    $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
-    $mail->Port       = 2525;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->SMTPDebug = 1;                     
+    $mail->isSMTP();                                          
+    $mail->Host       = 'smtp.mailtrap.io';            //mailtrap is a free smpt for email testing         
+    $mail->SMTPAuth   = true;                          // MARKERS: create a free mailtrap.io account to receive email         
+    $mail->Username   = '74850f4b25d8c4';                    
+    $mail->Password   = '03aaae6f7b04c4';                             
+    $mail->SMTPSecure = 'tls';           
+    $mail->Port       = 2525;                                   
 
-    //Recipients
     $mail->setFrom('michaelwillemmoore@gmail.com', 'Mailer');
     $mail->addAddress($email);
 
-    //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
+
+    $mail->isHTML(true);                                 
     $mail->Subject = 'BlueBooking Booking Confirmation';
     $mail->Body    = $body;
-    $mail->AltBody = strip_tags($body);
+    $mail->AltBody = strip_tags($body);               // email format, without html tags
 
     $mail->send();
     $confirmationMessage .= '<p>Booking Confirmation Email sent!</p>';
