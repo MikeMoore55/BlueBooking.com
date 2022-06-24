@@ -15,6 +15,7 @@ $Hotels = hotelOptionsArray();
         <?php
             createHotelList($Hotels);
         ?>
+    <!-- form that appears to make a booking -->
     </div>
     <div id="form-div" class="form-div">
         <form id="form" class="booking-form" method="POST" action="booking">
@@ -24,38 +25,39 @@ $Hotels = hotelOptionsArray();
                 <div class="name">
                     <label for="firstName">Name:</label>
                     <br>
-                    <input type="text" class="name-input" name="firstName"> 
+                    <input type="text" class="name-input" name="firstName" require> 
                 </div>
                 <div class="surname">
                     <label for="lastName">Surname:</label>
                     <br>
-                    <input type="text" class="surname-input" name="lastName"> 
+                    <input type="text" class="surname-input" name="lastName" require> 
                 </div>
             </div>
             <div class="email">
                     <label for="email">E-mail:</label>
                     <br>
-                    <input type="email" class="email-input" name="email">
+                    <input type="email" class="email-input" name="email" require>
             </div>
             <div class="hotel-selection">
                 <label for="hotelSelection">Where would you like to stay:</label>
                 <br>
                 <select name="hotelSelection">
                     <?php
-                        createBookingFormOption($Hotels)
+                        createBookingFormOption($Hotels)    // future update, make selection appear as the hotel that is clicked
                     ?>
                 </select>
             </div>
             <div class="date">
+                <!-- check in check out dates are selected with calender -->
                 <div class="check-in">
                     <label for="checkIn">Check-In:</label>
                     <br>
-                    <input type="date" name="checkIn" class="checkIn-input">
+                    <input type="date" name="checkIn" class="checkIn-input" require>
                 </div>
                 <div class="check-out">
                     <label for="checkOut">Check-Out:</label>
                     <br>
-                    <input type="date" name="checkOut" class="checkOut-input">
+                    <input type="date" name="checkOut" class="checkOut-input" require>
                 </div>
             </div>
             <input class="book-btn" type="submit" name="Book" value="Make Booking">
