@@ -247,6 +247,11 @@
       font-size: 1.5em;
       padding: 1% 2% 1% 2%;
     }
+
+    .booking-form .book-btn:active {
+      transform: scale(0.9);
+      box-shadow: 3px 3px 4.5px 0px rgb(75, 74, 74);
+    }
   }
   
   @media (min-width: 1000px) {
@@ -782,6 +787,11 @@
     padding: 2% 2% 2% 2%;
     box-shadow: rgb(72, 72, 72) 5px 5px 7px 0px;
   }
+
+  .compare-info .original-booking .confirm-original:active {
+    transform: scale(0.9);
+    box-shadow: 3px 3px 4.5px 0px rgb(75, 74, 74);
+  }
   
   .compare-info .alternative-booking {
     position: relative;
@@ -854,6 +864,11 @@
     padding: 2% 2% 2% 2%;
     box-shadow: rgb(72, 72, 72) 5px 5px 7px 0px;
   }
+
+  .compare-info .alternative-booking .confirm-alternative:active {
+    transform: scale(0.9);
+    box-shadow: 3px 3px 4.5px 0px rgb(75, 74, 74);
+  }
   
   /* this is form that pops up when user wishes to book the compared hotel */
   
@@ -913,6 +928,11 @@
     font-size: 1.2em;
     padding: 2% 2% 2% 2%;
     box-shadow: rgb(72, 72, 72) 5px 5px 7px 0px;
+  }
+
+  .new-book-div .book-btn:active {
+    transform: scale(0.9);
+    box-shadow: 3px 3px 4.5px 0px rgb(75, 74, 74);
   }
   
   /* Compare Media Queries */
