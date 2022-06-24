@@ -97,7 +97,7 @@
 
     <!-- form that appears to book either one of the alternatives -->
     <div id="new-book-div" class="new-book-div">
-        <form id="new-booking-form" class="new-booking-form" method="POST" action="confirm">
+        <form id="new-booking-form" class="new-booking-form" action="confirm" method="POST" >
             <span onclick="hideNewBook()">X</span>
             <h4>Book an Alternative Hotel</h4>
             <label for="newHotelSelection">Choose the Alternative Hotel:</label>
