@@ -20,6 +20,7 @@ if (isset($_POST["Book"])) {
     $hotelArray = array();
 
     /* loop through the original array, and make the hotel name, the key of the array, to make matching the selection to the appropriate info accurate */
+    /* should have used ID's to make matching hotel selection to info easier (did'nt think of that at first [ lol ]) */
     foreach ($Hotels as $Hotel => $value) {
         $hotelArray[$value['name']] = array("rate" => $value["rate"], "image" => $value["image"], "desc" => $value["description"], "rating" => $value["rating"], "pool" => $value["pool"], "spa" => $value["spa"], "wifi" => $value["wifi"], "restaurant" => $value["restaurant"], "childFriendly" => $value["childFriendly"]);
     };
@@ -27,12 +28,13 @@ if (isset($_POST["Book"])) {
     $_SESSION["simpleHotelArray"] = $hotelArray;
 
     $selectedHotel = $hotelArray["$selection"];
-
+    /* take selection info and populate class with it */
     $newBooking = BookingInformation::createBooking($userName, $userSurname, $userEmail, $selection, $selectedHotel["image"], $selectedHotel["rating"], $selectedHotel["desc"], $selectedHotel["pool"], $selectedHotel["wifi"], $selectedHotel["spa"], $selectedHotel["restaurant"], $selectedHotel["childFriendly"], $checkIn, $checkOut, $selectedHotel["rate"]);
-
+    /* empty array for storing booking object */
     $selectedHotelObject = [];
+    /* store the booking object i an array */
     array_push($selectedHotelObject, $newBooking);
-
+    /* save the array to a json folder */
     $selectedHotelJson = json_encode($selectedHotelObject);
     file_put_contents("bookingInfo.json", $selectedHotelJson);
     
