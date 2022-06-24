@@ -8,7 +8,7 @@ include("/MAMP/htdocs/BlueBooking.com/src/classes/HotelBookingInfoClass.class.ph
 $Hotels = hotelOptionsArray();
 
 if (isset($_POST["Book"])) {
-    $userName = $_POST["firstName"];
+    $userName = $_POST["firstName"]
     $userSurname = $_POST["lastName"];
     $userEmail = $_POST["email"];
     $selection = $_POST["hotelSelection"];
