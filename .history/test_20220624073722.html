@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="font-family:;">'.$Booking["name"] .' '.$Booking["surname"].'</ps>
+                    <br>
+                    <br>
+                    <p>Your Booking at <b>'.$Booking["hotel"].'</b> has been Booked.</p>
+                    <br>
+                    <p><b>Nightly Rate: </b>'.$Booking["rate"].' ZAR / day</p>
+                    <p><b>Check In: </b>'.$Booking["checkIn"].'</p>
+                    <p><b>Check Out: </b>'.$Booking["checkOut"].'</p>
+                    <p><b>Total Stay: </b>'.$days = calcDays($$Booking["checkIn"], $Booking["checkOut"]).' day/s</p>
+                    <p><b>Total Amount: </b>'.calcCosts(calcDays($$Booking["checkIn"], $Booking["checkOut"]), $Booking["rate"]).' ZAR</p>
+                    <br>
+                    <br>
+                    <p>Thank you for using BlueBooking.com</p>
+</body>
+</html>
