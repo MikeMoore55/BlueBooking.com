@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include ("/MAMP/htdocs/BlueBooking.com/src/includes/HotelInitialization.inc.php");
 include ("/MAMP/htdocs/BlueBooking.com/src/includes/CreateHotelListing.inc.php");
 include ("/MAMP/htdocs/BlueBooking.com/src/includes/BookingForm.inc.php");
@@ -12,6 +14,7 @@ $Hotels = hotelOptionsArray();
 <!-- display info on cards -->
 <main>
     
+
     <div class="hotel-cards">
         <?php
             createHotelList($Hotels);
@@ -29,7 +32,7 @@ $Hotels = hotelOptionsArray();
 
             <div class="user">
                 <div class="name">
-                    <label for="firstName">Name:</label>
+                    <label for="firstName">Name:</label><?php echo $nameErr ?>
                     <br>
                     <input type="text" class="name-input" name="firstName" require> 
                 </div>
@@ -63,7 +66,7 @@ $Hotels = hotelOptionsArray();
 
                     <label for="checkIn">Check-In:</label>
                     <br>
-                    <input type="date" name="checkIn" class="checkIn-input" require>
+                    <input id="checkIn-input" type="date" name="checkIn" class="checkIn-input" require>
 
                 </div>
 
@@ -71,10 +74,9 @@ $Hotels = hotelOptionsArray();
 
                     <label for="checkOut">Check-Out:</label>
                     <br>
-                    <input type="date" name="checkOut" class="checkOut-input" require>
+                    <input checkIn-input type="date" name="checkOut" class="checkOut-input" require>
 
                 </div>
-                <p id="erorr-msg">Error, your stay must be longer than 0 days</p>
             </div>
 
             <input class="book-btn" type="submit" name="Book" value="Make Booking">

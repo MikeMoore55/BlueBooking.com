@@ -8,15 +8,15 @@ include("/MAMP/htdocs/BlueBooking.com/src/classes/HotelBookingInfoClass.class.ph
 $Hotels = hotelOptionsArray();
 
 if (isset($_POST["Book"])) {
-    $userName = $_POST["firstName"];
+
     $userSurname = $_POST["lastName"];
     $userEmail = $_POST["email"];
     $selection = $_POST["hotelSelection"];
     $checkIn = $_POST["checkIn"];
     $checkOut = $_POST["checkOut"];
-
+    
     $_SESSION["selectedHotel"] = $selection;
-    /* empty array */
+   /* empty array */
     $hotelArray = array();
 
     /* loop through the original array, and make the hotel name, the key of the array, to make matching the selection to the appropriate info accurate */
@@ -35,6 +35,7 @@ if (isset($_POST["Book"])) {
 
     $selectedHotelJson = json_encode($selectedHotelObject);
     file_put_contents("bookingInfo.json", $selectedHotelJson);
+    
 }
 
 ?>

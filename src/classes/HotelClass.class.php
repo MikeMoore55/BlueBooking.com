@@ -45,12 +45,6 @@
             return $assocArray;
         }
 
-        public static function parse($Object){
-            $newHotel = new Hotel($Object->name, $Object->image, $Object->rate, $Object->rating, $Object->description, $Object->pool, $Object->wifi, $Object->spa, $Object->restaurant, $Object->childFriendly);
-            return $newHotel;
-        }
-
-
         /* ---- Getters & Setters ---- */
        public function getName(){
             return $this->name;

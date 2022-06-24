@@ -14,12 +14,9 @@ function disAppear(){
     form.style.display="none";
 };
 
-const start = document.querySelector(".checkIn-input").value;
-const end = document.querySelector(".checkOut-input").value;
-
-document.querySelector("#error-meg").style.display="none";
-
-if (start >= end) {
-    document.querySelector("#error-meg").style.display="block";
-    document.querySelector("#error-meg").style.color="red";
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == form) {
+      form.style.display = "none";
+    }
 }

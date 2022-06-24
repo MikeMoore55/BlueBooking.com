@@ -64,7 +64,7 @@
             
         public static function createBooking($userName, $userSurname, $userEmail, $hotelName, $hotelImage, $hotelRating, $hotelDescription, $hotelPool,$hotelWifi, $hotelSpa, $hotelRestaurant, $hotelChildFriendly, $checkInDate, $checkOutDate, $hotelRate){
             if ($checkInDate >= $checkOutDate) {
-                header("Location: home"); 
+                echo '<script>alert("Your Stay cannot be less than 1 day, please go back and correct you booking")</script>';
     
             } else {
     
