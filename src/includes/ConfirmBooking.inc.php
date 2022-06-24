@@ -76,7 +76,8 @@
                     <br>
                     <br>
                     <p>Thank you for using BlueBooking.com</p>
-                    ';        
+                    ';
+        $email = $Booking["email"];        
     };
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -119,7 +120,8 @@ try {
 <main>
     <div class="confirmation">
         <?php
-            echo $confirmationMessage;
+            echo $confirmationMessage; ;
+              
         ?>
     </div>
     
