@@ -54,7 +54,8 @@
                             <ol>
                                 <li>Pool: '.$Booking["pool"].'</li>
                                 <li>Spa: '.$Booking["spa"].'</li>
-                                <li>Restaurant: '.$Booking["restaurant"].'</li>                            </ol>
+                                <li>Restaurant: '.$Booking["restaurant"].'</li>
+                            </ol>
                             <p>Child-Friendly: '.$Booking["childFriendly"].'</p>
                             <p class="total">Total: '.$total.'-00 ZAR</p>
                             <form action="confirm" method="POST" >

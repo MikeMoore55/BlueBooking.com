@@ -1,8 +1,0 @@
-@import url("header.css");
-@import url("footer.css");
-
-.display-info{
-    background-color: red;
-    position: absolute;
-    top: 30%;
-}
