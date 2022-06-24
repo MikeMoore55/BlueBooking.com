@@ -1,4 +1,5 @@
 <?php
+/*  creates the options for select */
 
     function createBookingFormOption($Hotels)
     {
@@ -8,6 +9,6 @@
                 ';
         };
 
-    }
+    };
 
 ?>
